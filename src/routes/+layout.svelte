@@ -1,0 +1,15 @@
+<script lang="ts">
+	import { ModeWatcher } from 'mode-watcher';
+	import '../app.css';
+	import Header from '$lib/components/global/header.svelte';
+	import Footer from '$lib/components/global/footer.svelte';
+
+	let { children } = $props();
+</script>
+
+<ModeWatcher defaultMode="system" />
+<Header />
+<main class="container">
+	{@render children()}
+</main>
+<Footer />
