@@ -15,26 +15,21 @@ You can download or view my resume
 ## Projects
 
 
-### RealUp
+### FireDetect
 
-Realup is a VR&#x2F;AR video-sharing application that was the first VR&#x2F;Ar app in
-Iran. This app also uses in a variety of schools for teaching purposes.
+FireDetect web application for monitoring fire detects modules on the map
+developed with the ability to model the IoT modules and users, buildings, units
+data.
 
 **worked on**: frontend
 
-**tools used**: React,Redux,Angular
-
-
-
-<img src="src&#x2F;static&#x2F;projects&#x2F;realup&#x2F;1.svg" alt="realup0" width="320">
-
-
+**tools used**: React,NextJs,Redux,Material-UI,Node.js,TypeScript
 
 
 
 
 <video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;realup&#x2F;2.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building3.mp4" type="video/mp4">
 </video>
 
 
@@ -42,13 +37,152 @@ Iran. This app also uses in a variety of schools for teaching purposes.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;realup&#x2F;3.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-page.mp4" type="video/mp4">
 </video>
 
 
 
 
-<img src="src&#x2F;static&#x2F;projects&#x2F;realup&#x2F;4.webp" alt="realup3" width="320">
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/home-page.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building4.mp4" type="video/mp4">
+</video>
+
+
+
+
+<img src="src/static/projects/firedetect/notification-fire-detect.png" alt="firedetect4" width="320">
+
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/user-management.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-module.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building2.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-building.mp4" type="video/mp4">
+</video>
+
+
+
+
+<img src="src/static/projects/firedetect/add-apartment-fire-detect.png" alt="firedetect10" width="320">
+
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-simcard.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/profile-fire-detect.mp4" type="video/mp4">
+</video>
+
+
+
+
+### Quick Part
+
+The Quick Parts Price search application is a platform in which sellers can find
+out the price of auto parts and order if they wish.
+
+**worked on**: frontend,panel
+
+**tools used**: React,NextJs,Redux,Material-UI,Node.js,TypeScript
+
+
+
+<img src="src/static/projects/quick-part/8.webp" alt="quick-part0" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/2.webp" alt="quick-part1" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/1.svg" alt="quick-part2" width="320">
+
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/quick-part/5.mp4" type="video/mp4">
+</video>
+
+
+
+
+<img src="src/static/projects/quick-part/3.webp" alt="quick-part4" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/7.webp" alt="quick-part5" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/6.webp" alt="quick-part6" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/4.webp" alt="quick-part7" width="320">
 
 
 
@@ -66,7 +200,7 @@ and the frontend was responsible for the UI and the game flow.
 
 
 
-<img src="src&#x2F;static&#x2F;projects&#x2F;snake-and-ladders&#x2F;1.svg" alt="snake-and-ladders0" width="320">
+<img src="src/static/projects/snake-and-ladders/1.svg" alt="snake-and-ladders0" width="320">
 
 
 
@@ -74,171 +208,8 @@ and the frontend was responsible for the UI and the game flow.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;snake-and-ladders&#x2F;2.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/snake-and-ladders/2.mp4" type="video/mp4">
 </video>
-
-
-
-
-### FireDetect
-
-FireDetect web application for monitoring fire detects modules on the map
-developed with the ability to model the IoT modules and users, buildings, units
-data.
-
-**worked on**: frontend
-
-**tools used**: React,NextJs,Redux,Material-UI,Node.js,TypeScript
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;edit-building3.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;edit-page.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;home-page.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;edit-building4.mp4" type="video/mp4">
-</video>
-
-
-
-
-<img src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;notification-fire-detect.png" alt="firedetect4" width="320">
-
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;user-management.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;edit-building.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;add-module.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;edit-building2.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;add-building.mp4" type="video/mp4">
-</video>
-
-
-
-
-<img src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;add-apartment-fire-detect.png" alt="firedetect10" width="320">
-
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;add-simcard.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;firedetect&#x2F;profile-fire-detect.mp4" type="video/mp4">
-</video>
-
-
-
-
-### Pasco
-
-Pasco application is a solution for collecting waste by inspiring the users with
-gamification in the app and give them coins that they can cash out them.
-
-**worked on**: Mobile Application,Web
-
-**tools used**: React,React Native,JQuery,Bootstrap
-
-
-
-<img src="src&#x2F;static&#x2F;projects&#x2F;pasco&#x2F;5.webp" alt="pasco0" width="320">
-
-
-
-
-
-<img src="src&#x2F;static&#x2F;projects&#x2F;pasco&#x2F;1.svg" alt="pasco1" width="320">
-
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;pasco&#x2F;2.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;pasco&#x2F;3.mp4" type="video/mp4">
-</video>
-
-
-
-
-<img src="src&#x2F;static&#x2F;projects&#x2F;pasco&#x2F;6.webp" alt="pasco4" width="320">
-
-
-
-
-
-<img src="src&#x2F;static&#x2F;projects&#x2F;pasco&#x2F;4.webp" alt="pasco5" width="320">
-
 
 
 
@@ -256,7 +227,7 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;stylett&#x2F;homepage-stylett.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/homepage-stylett.mp4" type="video/mp4">
 </video>
 
 
@@ -264,13 +235,13 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;stylett&#x2F;customize4-stylett.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize4-stylett.mp4" type="video/mp4">
 </video>
 
 
 
 
-<img src="src&#x2F;static&#x2F;projects&#x2F;stylett&#x2F;customize.png" alt="stylett2" width="320">
+<img src="src/static/projects/stylett/customize.png" alt="stylett2" width="320">
 
 
 
@@ -278,7 +249,7 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;stylett&#x2F;customize2-stylett.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize2-stylett.mp4" type="video/mp4">
 </video>
 
 
@@ -286,7 +257,7 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;stylett&#x2F;customize-stylett.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize-stylett.mp4" type="video/mp4">
 </video>
 
 
@@ -294,42 +265,36 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;stylett&#x2F;customize3-stylett.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize3-stylett.mp4" type="video/mp4">
 </video>
 
 
 
 
-<img src="src&#x2F;static&#x2F;projects&#x2F;stylett&#x2F;customize2.png" alt="stylett6" width="320">
+<img src="src/static/projects/stylett/customize2.png" alt="stylett6" width="320">
 
 
 
 
 
-### Quick Part
+### Pasco
 
-The Quick Parts Price search application is a platform in which sellers can find
-out the price of auto parts and order if they wish.
+Pasco application is a solution for collecting waste by inspiring the users with
+gamification in the app and give them coins that they can cash out them.
 
-**worked on**: frontend,panel
+**worked on**: Mobile Application,Web
 
-**tools used**: React,NextJs,Redux,Material-UI,Node.js,TypeScript
-
-
-
-<img src="src&#x2F;static&#x2F;projects&#x2F;quick-part&#x2F;8.webp" alt="quick-part0" width="320">
+**tools used**: React,React Native,JQuery,Bootstrap
 
 
 
-
-
-<img src="src&#x2F;static&#x2F;projects&#x2F;quick-part&#x2F;2.webp" alt="quick-part1" width="320">
+<img src="src/static/projects/pasco/5.webp" alt="pasco0" width="320">
 
 
 
 
 
-<img src="src&#x2F;static&#x2F;projects&#x2F;quick-part&#x2F;1.svg" alt="quick-part2" width="320">
+<img src="src/static/projects/pasco/1.svg" alt="pasco1" width="320">
 
 
 
@@ -337,31 +302,66 @@ out the price of auto parts and order if they wish.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="src&#x2F;static&#x2F;projects&#x2F;quick-part&#x2F;5.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/pasco/2.mp4" type="video/mp4">
 </video>
 
 
 
 
-<img src="src&#x2F;static&#x2F;projects&#x2F;quick-part&#x2F;3.webp" alt="quick-part4" width="320">
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/pasco/3.mp4" type="video/mp4">
+</video>
+
+
+
+
+<img src="src/static/projects/pasco/6.webp" alt="pasco4" width="320">
 
 
 
 
 
-<img src="src&#x2F;static&#x2F;projects&#x2F;quick-part&#x2F;7.webp" alt="quick-part5" width="320">
+<img src="src/static/projects/pasco/4.webp" alt="pasco5" width="320">
 
 
 
 
 
-<img src="src&#x2F;static&#x2F;projects&#x2F;quick-part&#x2F;6.webp" alt="quick-part6" width="320">
+### RealUp
+
+Realup is a VR&#x2F;AR video-sharing application that was the first VR&#x2F;Ar app in
+Iran. This app also uses in a variety of schools for teaching purposes.
+
+**worked on**: frontend
+
+**tools used**: React,Redux,Angular
+
+
+
+<img src="src/static/projects/realup/1.svg" alt="realup0" width="320">
 
 
 
 
 
-<img src="src&#x2F;static&#x2F;projects&#x2F;quick-part&#x2F;4.webp" alt="quick-part7" width="320">
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/realup/2.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/realup/3.mp4" type="video/mp4">
+</video>
+
+
+
+
+<img src="src/static/projects/realup/4.webp" alt="realup3" width="320">
 
 
 
