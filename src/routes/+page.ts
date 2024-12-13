@@ -43,11 +43,12 @@ export const load: PageLoad = async () => {
 
 	if (dev) console.log('projects', allProjects);
 	// sort projects by metadata date
-	const sortedProjects = allProjects.sort((a, b) => {
+	const sortedProjects = allProjects.toSorted((a, b) => {
 		const aDate = new Date(a.metaData.date as string);
 		const bDate = new Date(b.metaData.date as string);
 		return bDate.getTime() - aDate.getTime();
 	});
+
 	return {
 		projects: sortedProjects,
 		about: (await import('$lib/components/about.md')).default,

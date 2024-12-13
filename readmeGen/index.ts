@@ -37,6 +37,13 @@ for await (const projectDir of Deno.readDir(`${Deno.cwd()}/src/static/projects`)
 	});
 }
 
+// sort projects by metadata date
+projects.sort((a, b) => {
+	const aDate = new Date(a.metaData.date);
+	const bDate = new Date(b.metaData.date);
+	return bDate.getTime() - aDate.getTime();
+});
+
 // generate readme.md
 const template = await Deno.readTextFile(`${Deno.cwd()}/README.mustache.md`);
 const about = await Deno.readTextFile(`${Deno.cwd()}/src/lib/components/about.md`);
