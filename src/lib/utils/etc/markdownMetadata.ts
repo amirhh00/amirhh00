@@ -57,3 +57,7 @@ export function metadataToListify<T = Record<string, unknown>>(
 		{} as { [K in keyof T]: T[K] extends string ? string | string[] : T[K] }
 	);
 }
+
+export function omitMetaDataFromMarkdown(markdownText: string): string {
+	return markdownText.replace(/---\n([\s\S]*?)\n---/, '').trim();
+}

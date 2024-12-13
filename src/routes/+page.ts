@@ -3,16 +3,7 @@ import type { Component } from 'svelte';
 import type { PageLoad } from './$types';
 import { getMediaType } from '$lib/utils/etc/mediaType';
 import { metadataToListify } from '$lib/utils/etc/markdownMetadata';
-
-type Project = {
-	markdown: string;
-	metaData: {
-		title: string;
-		workedOn: string[];
-		tools: string[];
-		date: string;
-	};
-};
+import type { Project } from '../@types/projects.type';
 
 export const load: PageLoad = async () => {
 	const allMDFiles = import.meta.glob('/src/static/projects/**/*.md', {

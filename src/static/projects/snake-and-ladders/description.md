@@ -5,7 +5,7 @@ tools: React, NextJs, Redux, Material-UI, Node.js, TypeScript, socket.io
 date: 2020-01-01
 ---
 
-#### S&L
+### S&L
 
 An online 2 player snake and ladder game with some special challenges and a
 different interface. The logic was implemented in the backend using WebSocket

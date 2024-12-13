@@ -1,9 +1,40 @@
 import mustache from 'https://raw.githubusercontent.com/janl/mustache.js/master/mustache.js';
+import {
+	extractMarkdownMetaData,
+	omitMetaDataFromMarkdown
+} from '../src/lib/utils/etc/markdownMetadata.ts';
+import { getMediaType } from '../src/lib/utils/etc/mediaType.ts';
+import type { Project } from '../src/@types/projects.type.ts';
 
-const directories: string[] = [];
+const projects: Project[] = [];
 
-for await (const project of Deno.readDir(`${Deno.cwd()}/src/static/projects`)) {
-	directories.push(project.name);
+for await (const projectDir of Deno.readDir(`${Deno.cwd()}/src/static/projects`)) {
+	const markdown = await Deno.readTextFile(
+		`${Deno.cwd()}/src/static/projects/${projectDir.name}/description.md`
+	);
+	const mediaFiles: Project['mediaFiles'] = [];
+	let i = 0;
+	for await (const mediaFile of Deno.readDir(
+		`${Deno.cwd()}/src/static/projects/${projectDir.name}`
+	)) {
+		const mediaPath = `src/static/projects/${projectDir.name}/${mediaFile.name}`;
+		const type = getMediaType(mediaPath);
+		if (type !== 'unknown') {
+			mediaFiles.push({
+				url: mediaPath,
+				type,
+				alt: projectDir.name + i++,
+				captionsUrl: '',
+				isVideo: type === 'video',
+				isImage: type === 'image'
+			});
+		}
+	}
+	projects.push({
+		markdown: omitMetaDataFromMarkdown(markdown),
+		metaData: extractMarkdownMetaData(markdown),
+		mediaFiles
+	});
 }
 
 // generate readme.md
@@ -13,16 +44,7 @@ const resume = await Deno.readTextFile(`${Deno.cwd()}/src/lib/components/resume.
 const contact = await Deno.readTextFile(`${Deno.cwd()}/src/lib/components/contact.md`);
 // deno-lint-ignore no-explicit-any
 const rendered = (mustache as any).render(template, {
-	projects: {
-		directories: directories.map((directory) => {
-			return {
-				name: directory,
-				description: 'Description',
-				url: `https://github.com/amirhh00/amirhh00/${directory}`
-			};
-		}),
-		count: directories.length
-	}
+	projects
 });
 
 await Deno.writeTextFile(`${Deno.cwd()}/README.md`, `${about}\n${resume}\n${rendered}\n${contact}`);

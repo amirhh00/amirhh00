@@ -1,4 +1,9 @@
-import { extractMarkdownMetaData, MetaDataListify, metadataToListify } from './markdownMetadata.ts';
+import {
+	extractMarkdownMetaData,
+	MetaDataListify,
+	metadataToListify,
+	omitMetaDataFromMarkdown
+} from './markdownMetadata.ts';
 import { assertEquals } from 'jsr:@std/assert';
 import { describe, it } from 'jsr:@std/testing/bdd';
 
@@ -79,5 +84,17 @@ describe('metadataToListify', () => {
 			workedOn: ['frontend'],
 			tools: ['HTML', 'TypeScript']
 		});
+	});
+});
+
+describe('omitMetaDataFromMarkdown', () => {
+	it('should omit metadata from markdown text', () => {
+		const markdownText = `---
+workedOn: frontend
+tools: HTML, TypeScript
+---
+# Sample Project`;
+		const omittedMarkdown = omitMetaDataFromMarkdown(markdownText);
+		assertEquals(omittedMarkdown, '# Sample Project');
 	});
 });
