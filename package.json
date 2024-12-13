@@ -50,6 +50,7 @@
 		"remark-footnotes": "^4.0.0"
 	},
 	"dependencies": {
+		"@vercel/analytics": "^1.4.1",
 		"lucide-svelte": "^0.468.0"
 	}
 }
