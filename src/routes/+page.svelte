@@ -30,9 +30,9 @@
 
 <meta name="description" content="Amirhossein Esmaeili's personal website" />
 <svelte:window on:resize={() => (isDesktop = window.innerWidth > 640)} />
-<div class="text-justify">
+<div id="about" class="text-justify">
 	{#snippet laptopContent()}
-		<div class="prose pointer-events-none" id="about">
+		<div class="prose pointer-events-none">
 			<data.about />
 		</div>
 		<div class="prose" id="experiences">
@@ -41,7 +41,7 @@
 	{/snippet}
 
 	{#if isDesktop}
-		<div class="flex min-h-[calc(100vh_-_var(--header-height,0px))] flex-col gap-4">
+		<div class="flex h-[calc(100vh_-_var(--header-height,0px))] max-h-[100vw] flex-col gap-4">
 			<BackGround3D>
 				{@render laptopContent()}
 			</BackGround3D>
@@ -92,7 +92,7 @@
 		{/if}
 	</div>
 
-	<div id="contact">
+	<div class="container" id="contact">
 		<data.contact />
 	</div>
 </div>

@@ -54,9 +54,6 @@
 					<a onclick={handleLinkClick} href="#about">About</a>
 				</li>
 				<li transition:slide|global class="p-2">
-					<a onclick={handleLinkClick} href="#experiences">Experiences</a>
-				</li>
-				<li transition:slide|global class="p-2">
 					<a onclick={handleLinkClick} href="#projects">Projects</a>
 				</li>
 				<li transition:slide|global class="p-2">

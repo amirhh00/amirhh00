@@ -9,13 +9,12 @@
 	import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 	import { HTML } from '@threlte/extras';
 	import { interactivity } from '@threlte/extras';
-	import { useCursor } from '@threlte/extras';
 	import { fade } from 'svelte/transition';
 	import { mode } from 'mode-watcher';
+	import type { TEvent } from '$lib/../@types/threlte.type';
 
 	interactivity();
-	const { onPointerEnter, onPointerLeave } = useCursor();
-
+	let lastPointerPositionDown = { x: 0, y: 0 };
 	let progress = new Tween(-1.6, {
 		duration: 400,
 		easing: cubicOut
@@ -95,7 +94,7 @@
 		// pointer is current cursor position
 		v.copy({ x: pointer.x, y: pointer.y, z: 0 });
 		v.unproject(camera);
-		camera.position.lerp({ x: -pointer.x * 3, y: -pointer.y * 1.2, z: camera.position.z }, 0.1);
+		camera.position.lerp({ x: -pointer.x * 2, y: -pointer.y, z: camera.position.z }, 0.02);
 		camera.lookAt(0, 0, 0);
 		camera.updateProjectionMatrix();
 	});
@@ -107,7 +106,7 @@
 		pointer.y = -(clientY / window.innerHeight) * 2 + 1;
 	}}
 	on:scroll={() => {
-		if (window.scrollY > window.innerHeight / 3) {
+		if (window.scrollY > window.innerHeight / 4) {
 			open = false;
 		} else {
 			open = true;
@@ -340,17 +339,23 @@
 			rotation={[0, 0, progress.current]}
 		>
 			<T.Mesh
-				onclick={(e: any) => {
-					open = !open;
-					onPointerLeave();
-				}}
-				onpointerenter={(e: any) => {
-					onPointerEnter();
-					// if (e.intersections.length && e.intersections[0].object.name === 'Object_27_1') {
-					// }
-				}}
-				onpointerleave={onPointerLeave}
 				name="Object_27_1"
+				onpointerup={(e: TEvent) => {
+					if (
+						lastPointerPositionDown.x === Number(e.pointer.x.toPrecision(1)) &&
+						lastPointerPositionDown.y === Number(e.pointer.y.toPrecision(1))
+					) {
+						open = !open;
+					} else {
+						console.log('drag', lastPointerPositionDown, e.pointer);
+					}
+				}}
+				onpointerdown={(e: TEvent) => {
+					lastPointerPositionDown = {
+						x: Number(e.pointer.x.toPrecision(1)),
+						y: Number(e.pointer.y.toPrecision(1))
+					};
+				}}
 				castShadow
 				receiveShadow
 				geometry={gltf.nodes.Object_27_1.geometry}
@@ -369,10 +374,10 @@
 					opacity: 1
 				})}
 			/>
-			<T.Group rotation={[0, Math.PI / 2, 0]} position={[0, 1.8, 0]}>
-				<HTML scale={0.3} transform>
+			<T.Group rotation={[0, Math.PI / 2, 0]} position={[0.15, 1.6, 0]}>
+				<HTML rotation={[0.1, 0, 0]} scale={0.3} transform>
 					{#if open}
-						<div in:fade={{ delay: 200 }}>
+						<div class="text-left" in:fade={{ delay: 200 }}>
 							{@render children?.()}
 						</div>
 					{/if}
