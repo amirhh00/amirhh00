@@ -1,5 +1,7 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
 import type { Config } from 'tailwindcss';
+// typography
+import typography from '@tailwindcss/typography';
 
 const config: Config = {
 	darkMode: ['class'],
@@ -10,7 +12,18 @@ const config: Config = {
 			center: true,
 			padding: '2rem',
 			screens: {
-				'2xl': '1400px'
+				'3xl': '1600px',
+				'2xl': '1400px',
+				xl: '1280px',
+				lg: '1024px',
+				md: '768px',
+				sm: '640px',
+				xs: '475px',
+				sxl: { max: '1280px' },
+				slg: { max: '1024px' },
+				smd: { max: '768px' },
+				ssm: { max: '640px' },
+				sxs: { max: '475px' }
 			}
 		},
 		extend: {
@@ -55,11 +68,12 @@ const config: Config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: [...fontFamily.sans]
+				sans: [...fontFamily.sans],
+				mono: ['Dune_Rise', ...fontFamily.mono]
 			}
 		}
 	},
-	plugins: [require('@tailwindcss/typography')]
+	plugins: [typography]
 };
 
 export default config;

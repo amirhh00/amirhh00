@@ -34,6 +34,7 @@
 		--ring: 222.2 84% 4.9%;
 
 		--radius: 0.5rem;
+		--header-height: 60px;
 	}
 
 	.dark {
@@ -75,10 +76,27 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+
+	@font-face {
+		font-family: 'Dune_Rise';
+		src: url('/fonts/Dune_Rise/Dune_Rise.ttf') format('truetype');
+		src: url('/fonts/Dune_Rise/Dune_Rise.otf') format('opentype');
+		font-style: normal;
+		font-weight: 100 900;
+		font-display: swap;
+	}
 }
 
 @layer components {
 	.prose {
 		@apply dark:prose-invert prose-p:my-0;
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			@apply mb-1 mt-6;
+		}
 	}
 }

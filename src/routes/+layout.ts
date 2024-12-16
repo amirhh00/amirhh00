@@ -3,5 +3,4 @@ import { injectAnalytics } from '@vercel/analytics/sveltekit';
 
 export const prerender = true;
 export const ssr = false;
-
-injectAnalytics({ mode: dev ? 'development' : 'production' });
+if (!dev) injectAnalytics({ mode: dev ? 'development' : 'production' });

@@ -9,7 +9,7 @@
 
 <ModeWatcher defaultMode="system" />
 <Header />
-<main class="container">
+<main class="mt-[var(--header-height)]">
 	{@render children()}
 </main>
 <Footer />
