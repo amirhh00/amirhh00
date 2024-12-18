@@ -3,9 +3,9 @@ import path from 'node:path';
 import sharp from 'sharp';
 import type { Plugin, UserConfig } from 'vite';
 import { getMediaType } from './src/lib/utils/etc/mediaType';
-// import { path as ffmpegStatic } from '@ffmpeg-installer/ffmpeg';
 import ffmpegStatic from 'ffmpeg-static';
 import { spawnSync } from 'node:child_process';
+import fs from 'node:fs/promises';
 
 export function myMediaPlugin(): Plugin {
 	let mode = '';
@@ -64,30 +64,11 @@ export function myMediaPlugin(): Plugin {
           };
         `;
 			} else if (mediaType === 'video') {
-				// const video = await new ffmpeg(base);
 				let poster = '';
-				const aspect = await getAspect(base);
+				const aspect = getAspect(base);
 				if (mode === 'production' && cfg.optimizeDeps) {
 					const hashName = hashImagePath(base);
 					const newFilePath = './static/images/posters/' + hashName + '.jpg';
-					// await video.save(newFilePath);
-					// use spawn instead of node-ffmpeg to be able to use the ffmpeg-static binary replace if exists and quiet mode
-					// execSync(
-					// 	`${ffmpegStatic} -ss 00:00:01 -i ${base} -vframes 1 ${newFilePath} -y -loglevel quiet`
-					// );
-					// spawn(ffmpegStatic!, [
-					// 	'-ss',
-					// 	'00:00:01',
-					// 	'-i',
-					// 	base,
-					// 	'-vframes',
-					// 	'1',
-					// 	newFilePath,
-					// 	'-y',
-					// 	'-loglevel',
-					// 	'quiet'
-					// ]);
-					// await savePoster(base, newFilePath);
 					spawnSync(
 						ffmpegStatic!,
 						[
@@ -106,14 +87,18 @@ export function myMediaPlugin(): Plugin {
 					);
 					// name from base with .jpg extension
 					// const fileName = path.basename(base).replace(/\.\w+$/, '.jpg');
-					// const newSourceFilePath = path.resolve(newFilePath);
-					// this.emitFile({
-					// 	type: 'asset',
-					// 	fileName,
-					// 	source: newSourceFilePath
-					// });
-					// remove ./static from the path
-					poster = newFilePath.slice(8);
+					const newSourceFilePath = path.resolve(newFilePath);
+					const sourceBuffer = await fs.readFile(newSourceFilePath);
+					const source = new Uint8Array(sourceBuffer);
+					// exit(0);
+					this.emitFile({
+						type: 'asset',
+						fileName: `${hashName}.jpg`,
+						source
+					});
+					await fs.unlink(newFilePath);
+					poster = hashName.toString();
+					// exit(0);
 					// const fileContent = await fs.readFile(newFilePath);
 				}
 				const metadata = {};
@@ -121,7 +106,7 @@ export function myMediaPlugin(): Plugin {
         import url from '${base}?url';
         export default {
           url,
-          poster: '${poster}',
+          poster: '/${poster}.jpg',
           type: 'video',
           isVideo: true,
           isImage: false,

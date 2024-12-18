@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { inview, type Options } from 'svelte-inview';
-	import type { MediaFile, MediaFileBase, VideoMediaFile } from '$lib/../@types/projects.type';
+	import type { MediaFile } from '$lib/../@types/projects.type';
 	import { fly, fade } from 'svelte/transition';
+	import Video from '$lib/components/global/Video.svelte';
 
 	interface Props {
 		media: MediaFile;
@@ -39,23 +40,7 @@
 					class={`mx-auto w-full rounded-xl sm:max-w-sm ${isInView ? 'animate' : ''}`}
 				/>
 			{:else if media.type === 'video'}
-				<video
-					preload="none"
-					src={media.url}
-					poster={(media as VideoMediaFile & MediaFileBase).poster}
-					controls
-					muted
-					autoplay={false}
-					style="aspect-ratio: {media.aspect?.value};"
-					class={`mx-auto w-full rounded-xl sm:max-w-sm ${isInView ? 'animate' : ''}`}
-				>
-					<track
-						kind="captions"
-						src={(media as VideoMediaFile & MediaFileBase).captionsUrl || ''}
-						srclang="en"
-						label="English"
-					/>
-				</video>
+				<Video {media} {isInView} />
 			{/if}
 		</div>
 	{:else}
