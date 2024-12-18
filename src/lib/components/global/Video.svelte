@@ -22,7 +22,7 @@
 			/>
 			<button
 				type="button"
-				class="absolute inset-0 z-10 flex h-full w-full items-center justify-center rounded-xl bg-white bg-opacity-50 dark:bg-black"
+				class="absolute inset-0 z-10 flex h-full w-full items-center justify-center rounded-xl bg-white !bg-opacity-50 dark:bg-black"
 				onclick={() => (showVideo = true)}
 				aria-label="Play video"
 			>

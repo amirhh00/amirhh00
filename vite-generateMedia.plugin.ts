@@ -69,6 +69,7 @@ export function myMediaPlugin(): Plugin {
 				if (mode === 'production' && cfg.optimizeDeps) {
 					const hashName = hashImagePath(base);
 					const newFilePath = './static/images/posters/' + hashName + '.jpg';
+					await fs.mkdir('./static/images/posters/', { recursive: true });
 					spawnSync(
 						ffmpegStatic!,
 						[
