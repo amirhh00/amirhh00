@@ -3,10 +3,8 @@ import path from 'node:path';
 import sharp from 'sharp';
 import type { Plugin, UserConfig } from 'vite';
 import { getMediaType } from './src/lib/utils/etc/mediaType';
-import ffmpegStatic from 'ffmpeg-static';
-// import {ffmpegPath, ffprobePath} from 'ffmpeg-ffprobe-static';
-// import ffmpeg from 'ffmpeg';
-import { execSync } from 'node:child_process';
+import { path as ffmpegStatic } from '@ffmpeg-installer/ffmpeg';
+import { spawn } from 'node:child_process';
 
 export function myMediaPlugin(): Plugin {
 	let mode = '';
@@ -67,30 +65,27 @@ export function myMediaPlugin(): Plugin {
 			} else if (mediaType === 'video') {
 				// const video = await new ffmpeg(base);
 				let poster = '';
-				const width = execSync(
-					`${ffmpegStatic} -i ${base} 2>&1 | grep Video: | grep -Po '\\d{3,5}x\\d{3,5}' | cut -d'x' -f1`
-				)
-					.toString()
-					.replace(/\n/g, '');
-
-				const height = execSync(
-					`${ffmpegStatic} -i ${base} 2>&1 | grep Video: | grep -Po '\\d{3,5}x\\d{3,5}' | cut -d'x' -f2`
-				)
-					.toString()
-					.replace(/\n/g, '');
-				const aspect = {
-					x: Number(width),
-					y: Number(height),
-					value: Number(width) / Number(height)
-				};
+				const aspect = await getAspect(base);
 				if (mode === 'production' && cfg.optimizeDeps) {
 					const hashName = hashImagePath(base);
 					const newFilePath = './static/images/posters/' + hashName + '.jpg';
 					// await video.save(newFilePath);
 					// use spawn instead of node-ffmpeg to be able to use the ffmpeg-static binary replace if exists and quiet mode
-					execSync(
-						`${ffmpegStatic} -ss 00:00:01 -i ${base} -vframes 1 ${newFilePath} -y -loglevel quiet`
-					);
+					// execSync(
+					// 	`${ffmpegStatic} -ss 00:00:01 -i ${base} -vframes 1 ${newFilePath} -y -loglevel quiet`
+					// );
+					// spawn(ffmpegStatic!, [
+					// 	'-ss',
+					// 	'00:00:01',
+					// 	'-i',
+					// 	base,
+					// 	'-vframes',
+					// 	'1',
+					// 	newFilePath,
+					// 	'-y',
+					// 	'-loglevel',
+					// 	'quiet'
+					// ]);
 
 					// remove ./static from the path
 					poster = newFilePath.slice(8);
@@ -116,4 +111,40 @@ export function myMediaPlugin(): Plugin {
 
 function hashImagePath(s: string) {
 	return [...s].reduce((hash, c) => (Math.imul(31, hash) + c.charCodeAt(0)) | 0, 0);
+}
+
+function getAspect(base: string) {
+	return new Promise<{ x: number; y: number; value: number }>((resolve) => {
+		// `ffmpeg -i ${base} 2>&1 | grep Video: | grep -Po '\d{3,5}x\d{3,5}''
+
+		const widthSpawn = spawn(ffmpegStatic!, [
+			'-i',
+			base,
+			'-f',
+			'ffmetadata'
+			// '2>&1'
+			// '|',
+			// 'grep',
+			// 'Video:',
+			// '|',
+			// 'grep',
+			// '-Po',
+			// "'\\d{3,5}x\\d{3,5}'"
+		]);
+		widthSpawn.stdout.on('data', (data) => {
+			console.log('stdout___________', data.toString());
+		});
+		widthSpawn.stderr.on('data', (data) => {
+			const input = data.toString();
+			const regex = /(\d{3,5})x(\d{3,5})/;
+			const match = input.match(regex);
+			const width = Number(match[1]);
+			const height = Number(match[2]);
+			resolve({
+				x: width,
+				y: height,
+				value: width / height
+			});
+		});
+	});
 }
