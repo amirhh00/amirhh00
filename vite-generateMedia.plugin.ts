@@ -3,7 +3,8 @@ import path from 'node:path';
 import sharp from 'sharp';
 import type { Plugin, UserConfig } from 'vite';
 import { getMediaType } from './src/lib/utils/etc/mediaType';
-import { path as ffmpegStatic } from '@ffmpeg-installer/ffmpeg';
+// import { path as ffmpegStatic } from '@ffmpeg-installer/ffmpeg';
+import ffmpegStatic from 'ffmpeg-static';
 import { spawn } from 'node:child_process';
 
 export function myMediaPlugin(): Plugin {
@@ -132,10 +133,11 @@ function getAspect(base: string) {
 			// "'\\d{3,5}x\\d{3,5}'"
 		]);
 		widthSpawn.stdout.on('data', (data) => {
-			console.log('stdout___________', data.toString());
+			console.log('stdout', data.toString());
 		});
 		widthSpawn.stderr.on('data', (data) => {
 			const input = data.toString();
+			console.log('stderr', input);
 			const regex = /(\d{3,5})x(\d{3,5})/;
 			const match = input.match(regex);
 			const width = Number(match[1]);
