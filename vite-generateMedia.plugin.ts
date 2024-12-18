@@ -5,7 +5,7 @@ import type { Plugin, UserConfig } from 'vite';
 import { getMediaType } from './src/lib/utils/etc/mediaType';
 // import { path as ffmpegStatic } from '@ffmpeg-installer/ffmpeg';
 import ffmpegStatic from 'ffmpeg-static';
-import { spawn } from 'node:child_process';
+import { spawnSync } from 'node:child_process';
 
 export function myMediaPlugin(): Plugin {
 	let mode = '';
@@ -87,7 +87,23 @@ export function myMediaPlugin(): Plugin {
 					// 	'-loglevel',
 					// 	'quiet'
 					// ]);
-
+					// await savePoster(base, newFilePath);
+					spawnSync(
+						ffmpegStatic!,
+						[
+							'-ss',
+							'00:00:01',
+							'-i',
+							base,
+							'-vframes',
+							'1',
+							newFilePath,
+							'-y',
+							'-loglevel',
+							'quiet'
+						],
+						{ stdio: 'pipe', encoding: 'utf-8' }
+					);
 					// remove ./static from the path
 					poster = newFilePath.slice(8);
 					// const fileContent = await fs.readFile(newFilePath);
@@ -115,43 +131,64 @@ function hashImagePath(s: string) {
 }
 
 function getAspect(base: string) {
-	return new Promise<{ x: number; y: number; value: number }>((resolve) => {
-		// `ffmpeg -i ${base} 2>&1 | grep Video: | grep -Po '\d{3,5}x\d{3,5}''
+	// return new Promise<{ x: number; y: number; value: number }>((resolve) => {
+	// 	// `ffmpeg -i ${base} 2>&1 | grep Video: | grep -Po '\d{3,5}x\d{3,5}''
 
-		const widthSpawn = spawn(ffmpegStatic!, [
-			'-i',
-			base,
-			'-f',
-			'ffmetadata'
-			// '2>&1'
-			// '|',
-			// 'grep',
-			// 'Video:',
-			// '|',
-			// 'grep',
-			// '-Po',
-			// "'\\d{3,5}x\\d{3,5}'"
-		]);
-		widthSpawn.stdout.on('data', (data) => {
-			console.log('stdout', data.toString());
-		});
-		widthSpawn.stderr.on('data', (data) => {
-			const input = data.toString();
-			let width = 0;
-			let height = 0;
-			try {
-				const regex = /(\d{3,5})x(\d{3,5})/;
-				const match = input.match(regex);
-				width = Number(match[1]);
-				height = Number(match[2]);
-			} catch (error) {
-				console.error('error', input, error);
-			}
-			resolve({
-				x: width,
-				y: height,
-				value: width / height
-			});
-		});
+	// 	const widthSpawn = spawn(ffmpegStatic!, [
+	// 		'-i',
+	// 		base,
+	// 		'-f',
+	// 		'ffmetadata'
+	// 		// '2>&1'
+	// 		// '|',
+	// 		// 'grep',
+	// 		// 'Video:',
+	// 		// '|',
+	// 		// 'grep',
+	// 		// '-Po',
+	// 		// "'\\d{3,5}x\\d{3,5}'"
+	// 	]);
+	// 	widthSpawn.stdout.on('data', (data) => {
+	// 		console.log('stdout', data.toString());
+	// 	});
+	// 	widthSpawn.stderr.on('data', (data) => {
+	// 		const input = data.toString();
+	// 		let width = 0;
+	// 		let height = 0;
+	// 		try {
+	// 			const regex = /(\d{3,5})x(\d{3,5})/;
+	// 			const match = input.match(regex);
+	// 			width = Number(match[1]);
+	// 			height = Number(match[2]);
+	// 		} catch (error) {
+	// 			console.error('error', input, error);
+	// 		}
+	// 		resolve({
+	// 			x: width,
+	// 			y: height,
+	// 			value: width / height
+	// 		});
+	// 	});
+	// });
+	const dimensionSpawn = spawnSync(ffmpegStatic!, ['-i', base], {
+		stdio: 'pipe',
+		encoding: 'utf-8'
 	});
+	const input = dimensionSpawn.stderr;
+	let width = 0;
+	let height = 0;
+	try {
+		const regex = /(\d{3,5})x(\d{3,5})/;
+		const match = input.match(regex);
+		if (!match || match.length < 3) return { x: 0, y: 0, value: 0 };
+		width = Number(match[1]);
+		height = Number(match[2]);
+		return {
+			x: width,
+			y: height,
+			value: width / height
+		};
+	} catch (error) {
+		console.error('error', input, error);
+	}
 }
