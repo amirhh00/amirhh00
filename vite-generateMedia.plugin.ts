@@ -137,11 +137,16 @@ function getAspect(base: string) {
 		});
 		widthSpawn.stderr.on('data', (data) => {
 			const input = data.toString();
-			console.log('stderr', input);
-			const regex = /(\d{3,5})x(\d{3,5})/;
-			const match = input.match(regex);
-			const width = Number(match[1]);
-			const height = Number(match[2]);
+			let width = 0;
+			let height = 0;
+			try {
+				const regex = /(\d{3,5})x(\d{3,5})/;
+				const match = input.match(regex);
+				width = Number(match[1]);
+				height = Number(match[2]);
+			} catch (error) {
+				console.error('error', input, error);
+			}
 			resolve({
 				x: width,
 				y: height,
