@@ -1,4 +1,5 @@
+/// <reference types="vite/client"/>
 declare module '*.md' {
-	const content: ConstructorOfATypedSvelteComponent | Component<any, any, any> | null | undefined;
+	const content: ConstructorOfATypedSvelteComponent | Component | null | undefined;
 	export default content;
 }

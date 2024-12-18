@@ -5,7 +5,7 @@
 	import { Tween } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
 	import { T, useTask, useThrelte, type Props } from '@threlte/core';
-	import { useGltf } from '@threlte/extras';
+	import { useGltf, useSuspense } from '@threlte/extras';
 	import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 	import { HTML } from '@threlte/extras';
 	import { interactivity } from '@threlte/extras';
@@ -44,6 +44,8 @@
 		error?: Snippet<[{ error: Error }]>;
 	} = $props();
 
+	const suspend = useSuspense();
+
 	type GLTFResult = {
 		nodes: {
 			Object_11: THREE.Mesh;
@@ -81,9 +83,11 @@
 	};
 	const dracoLoader = new DRACOLoader();
 	dracoLoader.setDecoderPath('/draco/');
-	const gltf = useGltf<GLTFResult>('/laptop.glb', {
-		dracoLoader
-	});
+	const gltf = suspend(
+		useGltf<GLTFResult>('/laptop.glb', {
+			dracoLoader
+		})
+	);
 
 	const v = new THREE.Vector3();
 	const { camera: writableCamera } = useThrelte();

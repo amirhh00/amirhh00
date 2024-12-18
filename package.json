@@ -22,6 +22,7 @@
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
 		"@types/deno": "^2.0.0",
+		"@types/ffmpeg": "^1.0.7",
 		"@types/three": "^0.171.0",
 		"autoprefixer": "^10.4.20",
 		"bits-ui": "^0.21.16",
@@ -29,8 +30,10 @@
 		"eslint": "^9.7.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
+		"ffmpeg-static": "^5.2.0",
 		"globals": "^15.0.0",
 		"mdsvex": "^0.11.2",
+		"mime": "^4.0.4",
 		"mode-watcher": "^0.5.0",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.6",
@@ -39,6 +42,7 @@
 		"rehype-slug": "^6.0.0",
 		"remark-footnotes": "^4.0.0",
 		"remark-gfm": "^4.0.0",
+		"sharp": "^0.33.5",
 		"svelte": "^5.7.0",
 		"svelte-check": "^4.0.0",
 		"svelte-preprocess-import-assets": "^1.0.1",
@@ -55,6 +59,7 @@
 		"@threlte/extras": "next",
 		"@vercel/analytics": "^1.4.1",
 		"lucide-svelte": "^0.468.0",
+		"svelte-inview": "^4.0.4",
 		"three": "^0.171.0"
 	}
 }

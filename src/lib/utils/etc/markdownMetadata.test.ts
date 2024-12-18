@@ -1,5 +1,5 @@
 import {
-	extractMarkdownMetaData,
+	extractMarkdownMetadata,
 	MetaDataListify,
 	metadataToListify,
 	omitMetaDataFromMarkdown
@@ -14,8 +14,8 @@ workedOn: frontend
 tools: HTML, TypeScript
 ---
 # Sample Project`;
-		const metaData = extractMarkdownMetaData(markdownText);
-		assertEquals(metaData, {
+		const metadata = extractMarkdownMetadata(markdownText);
+		assertEquals(metadata, {
 			workedOn: 'frontend',
 			tools: ['HTML', 'TypeScript']
 		});
@@ -27,8 +27,8 @@ workedOn: frontend,
 tools: HTML, TypeScript
 ---
 # Sample Project`;
-		const metaData = extractMarkdownMetaData(markdownText);
-		assertEquals(metaData, {
+		const metadata = extractMarkdownMetadata(markdownText);
+		assertEquals(metadata, {
 			workedOn: ['frontend'],
 			tools: ['HTML', 'TypeScript']
 		});

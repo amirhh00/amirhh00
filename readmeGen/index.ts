@@ -1,18 +1,20 @@
 import mustache from 'https://raw.githubusercontent.com/janl/mustache.js/master/mustache.js';
 import {
-	extractMarkdownMetaData,
+	extractMarkdownMetadata,
 	omitMetaDataFromMarkdown
 } from '../src/lib/utils/etc/markdownMetadata.ts';
 import { getMediaType } from '../src/lib/utils/etc/mediaType.ts';
-import type { Project } from '../src/@types/projects.type.ts';
+import type { MediaFileBase, Project } from '../src/@types/projects.type.ts';
 
-const projects: Project[] = [];
+type MarkdownProject = Omit<Project, 'mediaFiles'> & { mediaFiles: MediaFileBase[] };
+
+const projects: MarkdownProject[] = [];
 
 for await (const projectDir of Deno.readDir(`${Deno.cwd()}/src/static/projects`)) {
 	const markdown = await Deno.readTextFile(
 		`${Deno.cwd()}/src/static/projects/${projectDir.name}/description.md`
 	);
-	const mediaFiles: Project['mediaFiles'] = [];
+	const mediaFiles: MediaFileBase[] = [];
 	let i = 0;
 	for await (const mediaFile of Deno.readDir(
 		`${Deno.cwd()}/src/static/projects/${projectDir.name}`
@@ -24,7 +26,6 @@ for await (const projectDir of Deno.readDir(`${Deno.cwd()}/src/static/projects`)
 				url: mediaPath,
 				type,
 				alt: projectDir.name + i++,
-				captionsUrl: '',
 				isVideo: type === 'video',
 				isImage: type === 'image'
 			});
@@ -32,15 +33,15 @@ for await (const projectDir of Deno.readDir(`${Deno.cwd()}/src/static/projects`)
 	}
 	projects.push({
 		markdown: omitMetaDataFromMarkdown(markdown),
-		metaData: extractMarkdownMetaData(markdown),
+		metadata: extractMarkdownMetadata(markdown),
 		mediaFiles
 	});
 }
 
 // sort projects by metadata date
 projects.sort((a, b) => {
-	const aDate = new Date(a.metaData.date);
-	const bDate = new Date(b.metaData.date);
+	const aDate = new Date(a.metadata.date);
+	const bDate = new Date(b.metadata.date);
 	return bDate.getTime() - aDate.getTime();
 });
 
@@ -49,8 +50,9 @@ const template = await Deno.readTextFile(`${Deno.cwd()}/README.mustache.md`);
 const about = await Deno.readTextFile(`${Deno.cwd()}/src/lib/components/about.md`);
 const resume = await Deno.readTextFile(`${Deno.cwd()}/src/lib/components/resume.md`);
 const contact = await Deno.readTextFile(`${Deno.cwd()}/src/lib/components/contact.md`);
-// deno-lint-ignore no-explicit-any
-const rendered = (mustache as any).render(template, {
+if (!mustache.render || typeof mustache.render !== 'function')
+	throw new Error('Mustache render function not found');
+const rendered = mustache.render(template, {
 	projects
 });
 

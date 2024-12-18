@@ -10,7 +10,7 @@ export function MetaDataListify(value: string): string[] | string {
 	return value.trim();
 }
 
-export function extractMarkdownMetaData<T = Record<string, unknown>>(markdownText: string): T {
+export function extractMarkdownMetadata<T = Record<string, unknown>>(markdownText: string): T {
 	const meta = markdownText.match(/---\n([\s\S]*?)\n---/);
 	if (!meta) return {} as T;
 	const metaString = meta[1];

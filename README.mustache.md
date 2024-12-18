@@ -6,9 +6,9 @@ _**To view more projects, visit my [Website](amirhossein-esmaeili.com)**_.
 
 {{markdown}}
 
-**worked on**: {{metaData.workedOn}}
+**worked on**: {{metadata.workedOn}}
 
-**tools used**: {{metaData.tools}}
+**tools used**: {{metadata.tools}}
 
 {{#mediaFiles}}
 

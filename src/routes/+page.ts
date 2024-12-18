@@ -1,51 +1,62 @@
-import { dev } from '$app/environment';
+// import { dev } from '$app/environment';
 import type { Component } from 'svelte';
 import type { PageLoad } from './$types';
-import { getMediaType } from '$lib/utils/etc/mediaType';
+// import { getMediaType } from '$lib/utils/etc/mediaType';
 import { metadataToListify } from '$lib/utils/etc/markdownMetadata';
-import type { Project } from '../@types/projects.type';
+import type { MediaFile, Project } from '$lib/../@types/projects.type';
 
 export const load: PageLoad = async () => {
 	const allMDFiles = import.meta.glob('/src/static/projects/**/*.md', {
 		eager: true
 	});
-	const allMediaFiles = import.meta.glob('/src/static/projects/**/*.{png,jpg,jpeg,svg,mp4}', {
-		eager: true
-	});
-
+	const allMediaFiles = import.meta.glob<{ default: MediaFile }>(
+		'/src/static/projects/**/*.{png,jpg,jpeg,svg,mp4}',
+		{
+			query: 'myMedia',
+			eager: true
+		}
+	);
 	const iterableMDFiles = Object.entries(allMDFiles) as [
 		string,
-		{ default: Component; metadata: Project['metaData'] }
+		{ default: Component; metadata: Project['metadata'] }
 	][];
 
 	const allProjects = await Promise.all(
 		iterableMDFiles.map(async ([path, moduleMD]) => {
 			const thisPath = path.split('/').slice(0, -1).join('/');
 			const mediaFiles = Object.entries(allMediaFiles).flatMap(([mediaPath, moduleMedia]) => {
-				return mediaPath.startsWith(thisPath)
-					? {
-							url: (moduleMedia as any).default,
-							type: getMediaType((moduleMedia as any).default),
-							alt: moduleMD.metadata.title,
-							// TODO: add captions support later for videos
-							captionsUrl: undefined as unknown as string
-						}
-					: [];
+				if (mediaPath.startsWith(thisPath)) {
+					const { alt, ...defaultMediaDetails } = moduleMedia.default;
+					// const mediaType = getMediaType(url);
+					const media: MediaFile = {
+						alt: (moduleMD.metadata.title as string) || alt,
+						...defaultMediaDetails
+					};
+					// // TODO: add captions support later for videos
+					// if (mediaType === 'video') {
+					// 	(media as MediaFile<'video'>).captionsUrl = undefined as unknown as string;
+					// } else if (mediaType === 'image') {
+					// 	(media as MediaFile<'image'>).thumbnail = (mediaDetails as DefaultImage).thumbnail;
+					// }
+					return media;
+				}
+				return [];
 			});
 
 			return {
 				mediaFiles,
-				metaData: metadataToListify(moduleMD.metadata),
+				metadata: metadataToListify(moduleMD.metadata),
 				markdown: moduleMD.default
 			};
 		})
 	);
 
-	if (dev) console.log('projects', allProjects);
+	// if (dev)
+	console.log('projects', allProjects);
 	// sort projects by metadata date
 	const sortedProjects = allProjects.toSorted((a, b) => {
-		const aDate = new Date(a.metaData.date as string);
-		const bDate = new Date(b.metaData.date as string);
+		const aDate = new Date(a.metadata.date as string);
+		const bDate = new Date(b.metadata.date as string);
 		return bDate.getTime() - aDate.getTime();
 	});
 
