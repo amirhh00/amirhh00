@@ -104,6 +104,14 @@ export function myMediaPlugin(): Plugin {
 						],
 						{ stdio: 'pipe', encoding: 'utf-8' }
 					);
+					// name from base with .jpg extension
+					// const fileName = path.basename(base).replace(/\.\w+$/, '.jpg');
+					// const newSourceFilePath = path.resolve(newFilePath);
+					// this.emitFile({
+					// 	type: 'asset',
+					// 	fileName,
+					// 	source: newSourceFilePath
+					// });
 					// remove ./static from the path
 					poster = newFilePath.slice(8);
 					// const fileContent = await fs.readFile(newFilePath);
