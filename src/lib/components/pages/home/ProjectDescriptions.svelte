@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Project } from '$lib/../@types/projects.type';
-	import type { Component } from 'svelte';
+	import { onMount, type Component } from 'svelte';
 
 	// replace mardown with a component instead of a string in CurrPeoject
 	type CurrProject = Omit<Project, 'markdown'> & { markdown: Component };
@@ -9,6 +9,12 @@
 	}
 
 	const { project }: Props = $props();
+
+	onMount(() => {
+		const h3 = document.querySelector('.descriptions h3');
+		// remove h3 from the descriptions
+		if (h3) h3.remove();
+	});
 </script>
 
 <div class="prose contents">
