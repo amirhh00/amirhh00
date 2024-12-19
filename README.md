@@ -17,6 +17,133 @@ You can download or view my resume
 _**To view more projects, visit my [Website](amirhossein-esmaeili.com)**_.
 
 
+### WGSL101
+
+WGSL101 is a web application designed to teach the WGSL language, which is used
+for writing shaders in WebGPU. Developed as my dissertation project, this
+application serves both students and developers.
+
+The platform features a code editor with syntax highlighting, code completion,
+and AI-powered explanations for WGSL code. Users can write and execute shaders
+in real-time, viewing the results directly in their browser.
+
+Additionally, WGSL101 offers a tutorial section with lessons and exercises to
+facilitate learning. Users can take quizzes to test their knowledge, track their
+progress, and utilize AI assistance throughout their learning journey.
+
+**worked on**: frontend,backend,UI&#x2F;UX
+
+**tools used**: React,NextJs,Zustand,Shadcn&#x2F;ui,PostgreSQL,Node.js,OpenAI API,TypeScript
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-34-25.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-20-58.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-18-52.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-37-44.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-35-15.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/admin_panel.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-38-13.mp4" type="video/mp4">
+</video>
+
+
+
+
+### 3DWebRTC
+
+3DWebRTC is a web multiplayer game that uses WebRTC for real-time communication
+and Three.js for 3D rendering. Players can join and navigate through the scene.
+Players can see each other in real-time and communicate using voice chat.
+
+**worked on**: frontend,backend
+
+**tools used**: Svelte,Three.js,WebRTC,WebSockets,Bunjs,Hono,cloudflare workers,postgreSQL,DrizzleORM
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/3DWebRTC/2024-12-18 22-56-52.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/3DWebRTC/2024-11-05 22-27-21.mp4" type="video/mp4">
+</video>
+
+
+
+
+### Schilte
+
+Schilte is a web application designed for creating customizable 3D cabinet
+models. Users can modify the cabinet&#39;s dimensions, colors, and materials, as
+well as add features like shelves, doors, and drawers. The application allows
+users to view and rotate the cabinet in 3D, save their designs, and share them
+with others. It is built using React, NextJs, Three.js, Zustand, TailwindCSS,
+Node.js, and TypeScript.
+
+**worked on**: frontend
+
+**tools used**: React,NextJs,Three.js,Zustand,TailwindCSS,Node.js,TypeScript
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/schilte/2024-12-18 23-00-19.mp4" type="video/mp4">
+</video>
+
+
+
+
 ### FireDetect
 
 FireDetect web application for monitoring fire detects modules on the map
