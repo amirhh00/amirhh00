@@ -5,6 +5,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkGfm from 'remark-gfm';
 import remarkFootnotes from 'remark-footnotes';
+import { removeH3FromMarkdown } from './myRehypePlugin.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,7 +13,7 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.md'],
-			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, removeH3FromMarkdown],
 			remarkPlugins: [remarkGfm, remarkFootnotes]
 		})
 	],

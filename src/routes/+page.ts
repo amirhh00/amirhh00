@@ -1,9 +1,8 @@
-// import { dev } from '$app/environment';
 import type { Component } from 'svelte';
 import type { PageLoad } from './$types';
-// import { getMediaType } from '$lib/utils/etc/mediaType';
-import { metadataToListify } from '$lib/utils/etc/markdownMetadata';
+import { metadataToListify as metadataToList } from '$lib/utils/etc/markdownMetadata';
 import type { MediaFile, Project } from '$lib/../@types/projects.type';
+import { dev } from '$app/environment';
 
 export const load: PageLoad = async () => {
 	const allMDFiles = import.meta.glob('/src/static/projects/**/*.md', {
@@ -45,15 +44,14 @@ export const load: PageLoad = async () => {
 
 			return {
 				mediaFiles,
-				metadata: metadataToListify(moduleMD.metadata),
+				metadata: metadataToList(moduleMD.metadata),
 				markdown: moduleMD.default
 			};
 		})
 	);
 
-	// if (dev)
-	console.log('projects', allProjects);
-	// sort projects by metadata date
+	if (dev) console.log('projects', allProjects);
+	// sort projects by date
 	const sortedProjects = allProjects.toSorted((a, b) => {
 		const aDate = new Date(a.metadata.date as string);
 		const bDate = new Date(b.metadata.date as string);

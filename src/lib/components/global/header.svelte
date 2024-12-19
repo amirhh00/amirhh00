@@ -4,8 +4,8 @@
 	import { Button } from '$lib/components/ui/button';
 	import { slide } from 'svelte/transition';
 
-	let isDesktop = window.innerWidth > 640;
-	let open = $state(isDesktop);
+	let isDesktop = $state(window.innerWidth > 640);
+	let open = $state(window.innerWidth > 640);
 
 	function handleLinkClick(e: MouseEvent) {
 		// Add smooth scrolling to all links
@@ -47,7 +47,7 @@
 	class="fixed top-0 z-[99999999] flex w-screen items-center border-b-2 bg-[hsl(var(--background))] sm:h-[var(--header-height)]"
 >
 	<div class="container flex items-start justify-between py-2">
-		<p class="pointer-events-none font-mono text-xl leading-10">AE</p>
+		<p class="logo pointer-events-none font-mono text-xl leading-10">AE</p>
 		{#if open}
 			<ul class="-ml-2 mt-8 gap-2 sm:mt-0 sm:flex">
 				<li transition:slide|global class="p-2">
@@ -59,9 +59,11 @@
 				<li transition:slide|global class="p-2">
 					<a onclick={handleLinkClick} href="#contact">Contact</a>
 				</li>
-				<li transition:slide|global={{ duration: 10 }} class="block p-2 sm:hidden">
-					<ThemeToggle />
-				</li>
+				{#if !isDesktop}
+					<li transition:slide|global={{ duration: 10 }} class="block p-2 sm:hidden">
+						<ThemeToggle />
+					</li>
+				{/if}
 			</ul>
 		{/if}
 		<div class="hidden sm:block">

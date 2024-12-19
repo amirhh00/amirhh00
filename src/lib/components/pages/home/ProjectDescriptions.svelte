@@ -9,12 +9,6 @@
 	}
 
 	const { project }: Props = $props();
-
-	onMount(() => {
-		const h3 = document.querySelector('.descriptions h3');
-		// remove h3 from the descriptions
-		if (h3) h3.remove();
-	});
 </script>
 
 <div class="prose contents">
@@ -33,9 +27,9 @@
 	:global(.project) :global(h3) {
 		position: sticky;
 		top: var(--header-height);
+		padding: 8px;
+		padding-left: 0;
+		display: inline;
 		background-color: hsl(var(--background));
-	}
-	.descriptions > :global(h3) {
-		display: none;
 	}
 </style>
