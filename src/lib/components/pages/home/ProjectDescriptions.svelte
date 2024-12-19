@@ -11,7 +11,10 @@
 	const { project }: Props = $props();
 </script>
 
-<div class="descriptions prose contents">
+<div class="prose contents">
+	<h3>{project.metadata.title}</h3>
+</div>
+<div class="descriptions prose">
 	<project.markdown />
 	<p title={(project.metadata.date as string) || ''}>
 		<b>Worked on:</b>
@@ -25,5 +28,8 @@
 		position: sticky;
 		top: var(--header-height);
 		background-color: hsl(var(--background));
+	}
+	.descriptions > :global(h3) {
+		display: none;
 	}
 </style>
