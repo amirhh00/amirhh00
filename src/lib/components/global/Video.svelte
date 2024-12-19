@@ -46,7 +46,7 @@
 			controls
 			muted
 			autoplay
-			class="h-full w-full object-cover"
+			class="h-full w-full object-contain"
 		>
 			<track
 				kind="captions"

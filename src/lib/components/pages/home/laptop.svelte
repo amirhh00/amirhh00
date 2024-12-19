@@ -124,16 +124,12 @@
 	{:then gltf}
 		<T.Group name="Cube002_106" position={[0, 0.47, 0]} rotation={[0, 0, -0.02]}>
 			<T.Mesh
-				name="Object_9"
-				castShadow
-				receiveShadow
+				name="touchpad"
 				geometry={gltf.nodes.Object_9.geometry}
 				material={gltf.materials['Material.044']}
 			/>
 			<T.Mesh
 				name="Object_11"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_11.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.8, -0.22, 0.09]}
@@ -142,8 +138,6 @@
 			/>
 			<T.Mesh
 				name="Object_13"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_13.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.8, -0.22, 2.02]}
@@ -152,8 +146,6 @@
 			/>
 			<T.Mesh
 				name="Object_15"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_15.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.53, -0.19, -1.84]}
@@ -162,8 +154,6 @@
 			/>
 			<T.Mesh
 				name="Object_17"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_17.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.28, -0.16, 1.57]}
@@ -172,8 +162,6 @@
 			/>
 			<T.Mesh
 				name="Object_19"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_19.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.28, -0.16, 1.97]}
@@ -182,8 +170,6 @@
 			/>
 			<T.Mesh
 				name="Object_21"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_21.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.28, -0.16, -1.85]}
@@ -192,8 +178,6 @@
 			/>
 			<T.Mesh
 				name="Object_23"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_23.geometry}
 				material={gltf.materials['Material.012']}
 				position={[0.55, -0.09, 2.08]}
@@ -202,8 +186,6 @@
 			/>
 			<T.Mesh
 				name="Object_25"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_25.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.8, -0.22, 1.69]}
@@ -212,8 +194,6 @@
 			/>
 			<T.Mesh
 				name="Object_27"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_27.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.8, -0.22, -0.94]}
@@ -222,8 +202,6 @@
 			/>
 			<T.Mesh
 				name="Object_29"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_29.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.8, -0.22, -2.05]}
@@ -232,8 +210,6 @@
 			/>
 			<T.Mesh
 				name="Object_31"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_31.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.73, -0.21, -1.77]}
@@ -242,8 +218,6 @@
 			/>
 			<T.Mesh
 				name="Object_33"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_33.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.86, -0.22, -1.77]}
@@ -252,8 +226,6 @@
 			/>
 			<T.Mesh
 				name="Object_35"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_35.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.53, -0.19, 1.89]}
@@ -262,8 +234,6 @@
 			/>
 			<T.Mesh
 				name="Object_37"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_37.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.53, -0.19, 1.42]}
@@ -272,8 +242,6 @@
 			/>
 			<T.Mesh
 				name="Object_39"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_39.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.02, -0.14, 1.64]}
@@ -282,8 +250,6 @@
 			/>
 			<T.Mesh
 				name="Object_41"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_41.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.02, -0.14, 2]}
@@ -292,8 +258,6 @@
 			/>
 			<T.Mesh
 				name="Object_43"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_43.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.02, -0.14, -1.96]}
@@ -302,8 +266,6 @@
 			/>
 			<T.Mesh
 				name="Object_45"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_45.geometry}
 				material={gltf.materials['Material.012']}
 				position={[0.76, -0.11, 1.75]}
@@ -312,8 +274,6 @@
 			/>
 			<T.Mesh
 				name="Object_47"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_47.geometry}
 				material={gltf.materials['Material.012']}
 				position={[0.76, -0.11, 2.05]}
@@ -322,8 +282,6 @@
 			/>
 			<T.Mesh
 				name="Object_49"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_49.geometry}
 				material={gltf.materials['Material.012']}
 				position={[0.76, -0.11, -1.91]}
@@ -360,15 +318,11 @@
 						y: Number(e.pointer.y.toPrecision(1))
 					};
 				}}
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_27_1.geometry}
 				material={gltf.materials['Material.007']}
 			/>
 			<T.Mesh
 				name="Object_27_2"
-				castShadow
-				receiveShadow
 				geometry={gltf.nodes.Object_27_2.geometry}
 				material={new THREE.MeshStandardMaterial({
 					color: $mode === 'dark' ? 0x000000 : 0xffffff,
@@ -390,8 +344,6 @@
 		</T.Group>
 		<T.Mesh
 			name="Object_8"
-			castShadow
-			receiveShadow
 			geometry={gltf.nodes.Object_8.geometry}
 			material={gltf.materials['Material.001']}
 			position={[0, 0.45, 0]}
