@@ -26,15 +26,15 @@
 		{@render laptopContent()}
 	</BackGround3DDesktop>
 
-	<div class="container" id="projects">
+	<div class="container relative" id="projects">
 		<div class="prose">
 			<h2>Projects</h2>
 		</div>
 		{#if data}
 			{#each data.projects as project}
-				<div id={camelCase(project.metadata.title as string)} class="mt-4">
+				<div id={camelCase(project.metadata.title as string)} class="project mt-4">
 					<ProjectDescriptions project={project as any} />
-					<div class="medias not-prose my-4 flex flex-col gap-4">
+					<div class="medias not-prose relative z-10 my-4 flex flex-col gap-4">
 						{#each project.mediaFiles as media}
 							<MediaInView {media} />
 						{/each}
