@@ -2,7 +2,7 @@ import puppeteer from 'npm:puppeteer';
 
 const browser = await puppeteer.launch();
 const page = await browser.newPage();
-const BASE_URL = Deno.env.get('BASE_URL') || 'http://amirhossein-esmaeili.com';
+const BASE_URL = 'http://localhost:5173';
 await page.goto(BASE_URL + '/resume', {
 	waitUntil: 'networkidle2'
 });
