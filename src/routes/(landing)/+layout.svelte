@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ModeWatcher } from 'mode-watcher';
-	import '../app.css';
+	import '$lib/../app.css';
 	import Header from '$lib/components/global/header.svelte';
 	import Footer from '$lib/components/global/footer.svelte';
 

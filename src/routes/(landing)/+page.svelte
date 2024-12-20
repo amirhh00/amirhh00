@@ -3,7 +3,7 @@
 	import { camelCase } from '$lib/utils/etc/case';
 	import BackGround3DDesktop from '$lib/components/pages/home/BackGround3D.svelte';
 	import MediaInView from '$lib/components/pages/home/MediaInView.svelte';
-	import ProjectDescriptions from '../lib/components/pages/home/ProjectDescriptions.svelte';
+	import ProjectDescriptions from '$lib/components/pages/home/ProjectDescriptions.svelte';
 
 	let { data }: { data: PageData } = $props();
 </script>

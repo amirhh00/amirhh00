@@ -1,6 +1,6 @@
 ## Projects
 
-_**To view more projects, visit my [Website](amirhossein-esmaeili.com)**_.
+_**To see more, visit my [Website](amirhossein-esmaeili.com)**_.
 
 {{#projects}}
 

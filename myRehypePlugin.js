@@ -1,14 +1,12 @@
-/**
- * rehype plugin to remove h3 from markdown
- * @returns {undefined}
- */
 export const removeH3FromMarkdown = () => {
 	/**
 	 * @param {import('hast').Root} tree
+	 * @param {vFile} file
 	 *   Tree.
 	 * @returns {undefined}
 	 */
-	return (tree) => {
-		tree.children = tree.children.filter((node) => node.tagName !== 'h3');
+	return (tree, file) => {
+		if (file.filename.includes('/src/static/projects/'))
+			tree.children = tree.children.filter((node) => node.tagName !== 'h3');
 	};
 };
