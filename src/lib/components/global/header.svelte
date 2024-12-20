@@ -59,6 +59,9 @@
 				<li transition:slide|global class="p-2">
 					<a onclick={handleLinkClick} href="#contact">Contact</a>
 				</li>
+				<li data-sveltekit-reload transition:slide|global class="p-2">
+					<a href="/resume">Resume</a>
+				</li>
 				{#if !isDesktop}
 					<li transition:slide|global={{ duration: 10 }} class="block p-2 sm:hidden">
 						<ThemeToggle />
