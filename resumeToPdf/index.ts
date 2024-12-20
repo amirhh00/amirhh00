@@ -1,6 +1,8 @@
 import puppeteer from 'npm:puppeteer';
 
-const browser = await puppeteer.launch();
+const browser = await puppeteer.launch({
+	args: ['--no-sandbox', '--disable-setuid-sandbox']
+});
 const page = await browser.newPage();
 const BASE_URL = Deno.env.get('BASE_URL') || 'http://localhost:5173';
 await page.goto(BASE_URL + '/resume', {
