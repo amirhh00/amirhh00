@@ -15,10 +15,13 @@ jobs:
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
+
       - name: Install chrome
         run: npx puppeteer browsers install chrome
+
       - name: Run script
-        run: deno run -A ./resumeToPDF/index.ts
+        run: deno run -A resumeToPdf/index.ts
+
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
