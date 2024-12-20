@@ -9,12 +9,13 @@ making video games, 3D websites and biking 🚴‍♂️.
 
 ## Work Experiences
 
-You can download or view my resume
-[here](https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/static/resume.pdf)
+You can
+[download](https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/static/resume.pdf)
+or [view](https://amirhossein-esmaeili.com/resume) my resume.
 
 ## Projects
 
-_**To view more projects, visit my [Website](amirhossein-esmaeili.com)**_.
+_**To see more, visit my [Website](amirhossein-esmaeili.com)**_.
 
 
 ### WGSL101
@@ -34,30 +35,6 @@ progress, and utilize AI assistance throughout their learning journey.
 **worked on**: frontend,backend,UI&#x2F;UX
 
 **tools used**: React,NextJs,Zustand,Shadcn&#x2F;ui,PostgreSQL,Node.js,OpenAI API,TypeScript
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-34-25.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-20-58.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-18-52.mp4" type="video/mp4">
-</video>
-
 
 
 
@@ -88,6 +65,30 @@ progress, and utilize AI assistance throughout their learning journey.
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-38-13.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-20-58.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-34-25.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-18-52.mp4" type="video/mp4">
 </video>
 
 
@@ -156,39 +157,7 @@ data.
 
 
 
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building3.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-page.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/home-page.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building4.mp4" type="video/mp4">
-</video>
-
-
-
-
-<img src="src/static/projects/firedetect/notification-fire-detect.png" alt="firedetect4" width="320">
+<img src="src/static/projects/firedetect/add-apartment-fire-detect.png" alt="firedetect0" width="320">
 
 
 
@@ -196,7 +165,7 @@ data.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/user-management.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-module.mp4" type="video/mp4">
 </video>
 
 
@@ -212,15 +181,7 @@ data.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-module.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building2.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building4.mp4" type="video/mp4">
 </video>
 
 
@@ -234,7 +195,47 @@ data.
 
 
 
-<img src="src/static/projects/firedetect/add-apartment-fire-detect.png" alt="firedetect10" width="320">
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building3.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/home-page.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/profile-fire-detect.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-page.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building2.mp4" type="video/mp4">
+</video>
+
+
+
+
+<img src="src/static/projects/firedetect/notification-fire-detect.png" alt="firedetect10" width="320">
 
 
 
@@ -250,7 +251,7 @@ data.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/profile-fire-detect.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/user-management.mp4" type="video/mp4">
 </video>
 
 
@@ -267,19 +268,13 @@ out the price of auto parts and order if they wish.
 
 
 
-<img src="src/static/projects/quick-part/8.webp" alt="quick-part0" width="320">
+<img src="src/static/projects/quick-part/6.webp" alt="quick-part0" width="320">
 
 
 
 
 
-<img src="src/static/projects/quick-part/2.webp" alt="quick-part1" width="320">
-
-
-
-
-
-<img src="src/static/projects/quick-part/1.svg" alt="quick-part2" width="320">
+<img src="src/static/projects/quick-part/1.svg" alt="quick-part1" width="320">
 
 
 
@@ -293,25 +288,31 @@ out the price of auto parts and order if they wish.
 
 
 
-<img src="src/static/projects/quick-part/3.webp" alt="quick-part4" width="320">
+<img src="src/static/projects/quick-part/7.webp" alt="quick-part3" width="320">
 
 
 
 
 
-<img src="src/static/projects/quick-part/7.webp" alt="quick-part5" width="320">
+<img src="src/static/projects/quick-part/4.webp" alt="quick-part4" width="320">
 
 
 
 
 
-<img src="src/static/projects/quick-part/6.webp" alt="quick-part6" width="320">
+<img src="src/static/projects/quick-part/2.webp" alt="quick-part5" width="320">
 
 
 
 
 
-<img src="src/static/projects/quick-part/4.webp" alt="quick-part7" width="320">
+<img src="src/static/projects/quick-part/8.webp" alt="quick-part6" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/3.webp" alt="quick-part7" width="320">
 
 
 
@@ -370,8 +371,10 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 
-<img src="src/static/projects/stylett/customize.png" alt="stylett2" width="320">
 
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize-stylett.mp4" type="video/mp4">
+</video>
 
 
 
@@ -384,10 +387,8 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 
+<img src="src/static/projects/stylett/customize2.png" alt="stylett4" width="320">
 
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize-stylett.mp4" type="video/mp4">
-</video>
 
 
 
@@ -400,7 +401,7 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 
-<img src="src/static/projects/stylett/customize2.png" alt="stylett6" width="320">
+<img src="src/static/projects/stylett/customize.png" alt="stylett6" width="320">
 
 
 
@@ -417,13 +418,21 @@ gamification in the app and give them coins that they can cash out them.
 
 
 
-<img src="src/static/projects/pasco/5.webp" alt="pasco0" width="320">
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/pasco/3.mp4" type="video/mp4">
+</video>
+
+
+
+
+<img src="src/static/projects/pasco/6.webp" alt="pasco1" width="320">
 
 
 
 
 
-<img src="src/static/projects/pasco/1.svg" alt="pasco1" width="320">
+<img src="src/static/projects/pasco/1.svg" alt="pasco2" width="320">
 
 
 
@@ -437,21 +446,13 @@ gamification in the app and give them coins that they can cash out them.
 
 
 
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/pasco/3.mp4" type="video/mp4">
-</video>
-
-
-
-
-<img src="src/static/projects/pasco/6.webp" alt="pasco4" width="320">
+<img src="src/static/projects/pasco/4.webp" alt="pasco4" width="320">
 
 
 
 
 
-<img src="src/static/projects/pasco/4.webp" alt="pasco5" width="320">
+<img src="src/static/projects/pasco/5.webp" alt="pasco5" width="320">
 
 
 
@@ -468,7 +469,15 @@ Iran. This app also uses in a variety of schools for teaching purposes.
 
 
 
-<img src="src/static/projects/realup/1.svg" alt="realup0" width="320">
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/realup/3.mp4" type="video/mp4">
+</video>
+
+
+
+
+<img src="src/static/projects/realup/1.svg" alt="realup1" width="320">
 
 
 
@@ -477,14 +486,6 @@ Iran. This app also uses in a variety of schools for teaching purposes.
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/realup/2.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/realup/3.mp4" type="video/mp4">
 </video>
 
 
