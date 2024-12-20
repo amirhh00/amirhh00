@@ -2,6 +2,7 @@
   "version": "4",
   "specifiers": {
     "npm:@types/node@*": "22.5.4",
+    "npm:puppeteer-core@*": "23.11.1_devtools-protocol@0.0.1367902",
     "npm:puppeteer@*": "23.11.1_devtools-protocol@0.0.1367902"
   },
   "npm": {

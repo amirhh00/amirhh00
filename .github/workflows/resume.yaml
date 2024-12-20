@@ -16,11 +16,11 @@ jobs:
         with:
           deno-version: v2.x
 
-      - name: Install chrome
-        run: npx puppeteer browsers install chrome
-
       - name: Run script
-        run: deno run -A resumeToPdf/index.ts
+        run: |
+          cd resumeToPdf
+          deno install --allow-scripts=npm:puppeteer@23.11.1 --node-modules-dir=auto
+          deno run -A --node-modules-dir=auto ./index.ts
 
       - name: Commit and push changes
         run: |
