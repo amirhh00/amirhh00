@@ -4,7 +4,7 @@ const browser = await puppeteer.launch({
 	args: ['--no-sandbox', '--disable-setuid-sandbox']
 });
 const page = await browser.newPage();
-const BASE_URL = Deno.env.get('BASE_URL') || 'http://localhost:5173';
+const BASE_URL = Deno.env.get('BASE_URL') || 'http://amirhossein-esmaeili.com';
 await page.goto(BASE_URL + '/resume', {
 	waitUntil: 'networkidle2'
 });
