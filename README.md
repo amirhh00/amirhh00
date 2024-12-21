@@ -11,11 +11,12 @@ making video games, 3D websites and biking 🚴‍♂️.
 
 You can
 [download](https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/static/resume.pdf)
-or [view](https://amirhossein-esmaeili.com/resume/) my resume.
+or [view](https://amirhossein-esmaeili.com/resume) my resume.
 
 ## Projects
 
 _**To see more, visit my [Website](amirhossein-esmaeili.com)**_.
+
 
 ### WGSL101
 
@@ -35,33 +36,63 @@ progress, and utilize AI assistance throughout their learning journey.
 
 **tools used**: React,NextJs,Zustand,Shadcn&#x2F;ui,PostgreSQL,Node.js,OpenAI API,TypeScript
 
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-37-44.mp4" type="video/mp4">
 </video>
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-35-15.mp4" type="video/mp4">
 </video>
 
+
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/admin_panel.mp4" type="video/mp4">
 </video>
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-38-13.mp4" type="video/mp4">
 </video>
 
+
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-20-58.mp4" type="video/mp4">
 </video>
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-34-25.mp4" type="video/mp4">
 </video>
 
+
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-18-52.mp4" type="video/mp4">
 </video>
+
+
+
 
 ### 3DWebRTC
 
@@ -73,13 +104,23 @@ Players can see each other in real-time and communicate using voice chat.
 
 **tools used**: Svelte,Three.js,WebRTC,WebSockets,Bunjs,Hono,cloudflare workers,postgreSQL,DrizzleORM
 
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/3DWebRTC/2024-12-18 22-56-52.mp4" type="video/mp4">
 </video>
 
+
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/3DWebRTC/2024-11-05 22-27-21.mp4" type="video/mp4">
 </video>
+
+
+
 
 ### Schilte
 
@@ -94,9 +135,15 @@ Node.js, and TypeScript.
 
 **tools used**: React,NextJs,Three.js,Zustand,TailwindCSS,Node.js,TypeScript
 
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/schilte/2024-12-18 23-00-19.mp4" type="video/mp4">
 </video>
+
+
+
 
 ### FireDetect
 
@@ -108,53 +155,107 @@ data.
 
 **tools used**: React,NextJs,Redux,Material-UI,Node.js,TypeScript
 
+
+
 <img src="src/static/projects/firedetect/add-apartment-fire-detect.png" alt="firedetect0" width="320">
+
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-module.mp4" type="video/mp4">
 </video>
 
+
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building.mp4" type="video/mp4">
 </video>
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building4.mp4" type="video/mp4">
 </video>
 
+
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-building.mp4" type="video/mp4">
 </video>
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building3.mp4" type="video/mp4">
 </video>
 
+
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/home-page.mp4" type="video/mp4">
 </video>
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/profile-fire-detect.mp4" type="video/mp4">
 </video>
 
+
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-page.mp4" type="video/mp4">
 </video>
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building2.mp4" type="video/mp4">
 </video>
 
+
+
+
 <img src="src/static/projects/firedetect/notification-fire-detect.png" alt="firedetect10" width="320">
+
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-simcard.mp4" type="video/mp4">
 </video>
 
+
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/user-management.mp4" type="video/mp4">
 </video>
+
+
+
 
 ### Quick Part
 
@@ -165,23 +266,57 @@ out the price of auto parts and order if they wish.
 
 **tools used**: React,NextJs,Redux,Material-UI,Node.js,TypeScript
 
+
+
 <img src="src/static/projects/quick-part/6.webp" alt="quick-part0" width="320">
 
+
+
+
+
 <img src="src/static/projects/quick-part/1.svg" alt="quick-part1" width="320">
+
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/quick-part/5.mp4" type="video/mp4">
 </video>
 
+
+
+
 <img src="src/static/projects/quick-part/7.webp" alt="quick-part3" width="320">
+
+
+
+
 
 <img src="src/static/projects/quick-part/4.webp" alt="quick-part4" width="320">
 
+
+
+
+
 <img src="src/static/projects/quick-part/2.webp" alt="quick-part5" width="320">
+
+
+
+
 
 <img src="src/static/projects/quick-part/8.webp" alt="quick-part6" width="320">
 
+
+
+
+
 <img src="src/static/projects/quick-part/3.webp" alt="quick-part7" width="320">
+
+
+
+
 
 ### S&amp;L
 
@@ -193,11 +328,21 @@ and the frontend was responsible for the UI and the game flow.
 
 **tools used**: React,NextJs,Redux,Material-UI,Node.js,TypeScript,socket.io
 
+
+
 <img src="src/static/projects/snake-and-ladders/1.svg" alt="snake-and-ladders0" width="320">
+
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/snake-and-ladders/2.mp4" type="video/mp4">
 </video>
+
+
+
 
 ### FireDetect
 
@@ -208,29 +353,59 @@ with the possibility of personalizing and customizing the product for customers.
 
 **tools used**: React,Redux,Material-UI,TypeScript
 
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/homepage-stylett.mp4" type="video/mp4">
 </video>
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize4-stylett.mp4" type="video/mp4">
 </video>
 
+
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize-stylett.mp4" type="video/mp4">
 </video>
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize2-stylett.mp4" type="video/mp4">
 </video>
 
+
+
+
 <img src="src/static/projects/stylett/customize2.png" alt="stylett4" width="320">
+
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize3-stylett.mp4" type="video/mp4">
 </video>
 
+
+
+
 <img src="src/static/projects/stylett/customize.png" alt="stylett6" width="320">
+
+
+
+
 
 ### Pasco
 
@@ -241,21 +416,47 @@ gamification in the app and give them coins that they can cash out them.
 
 **tools used**: React,React Native,JQuery,Bootstrap
 
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/pasco/3.mp4" type="video/mp4">
 </video>
 
+
+
+
 <img src="src/static/projects/pasco/6.webp" alt="pasco1" width="320">
 
+
+
+
+
 <img src="src/static/projects/pasco/1.svg" alt="pasco2" width="320">
+
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/pasco/2.mp4" type="video/mp4">
 </video>
 
+
+
+
 <img src="src/static/projects/pasco/4.webp" alt="pasco4" width="320">
 
+
+
+
+
 <img src="src/static/projects/pasco/5.webp" alt="pasco5" width="320">
+
+
+
+
 
 ### RealUp
 
@@ -266,17 +467,35 @@ Iran. This app also uses in a variety of schools for teaching purposes.
 
 **tools used**: React,Redux,Angular
 
+
+
+
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/realup/3.mp4" type="video/mp4">
 </video>
 
+
+
+
 <img src="src/static/projects/realup/1.svg" alt="realup1" width="320">
+
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/realup/2.mp4" type="video/mp4">
 </video>
 
+
+
+
 <img src="src/static/projects/realup/4.webp" alt="realup3" width="320">
+
+
+
+
 
 ## Contact Me
 
