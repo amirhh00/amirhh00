@@ -1,0 +1,34 @@
+- HTML & CSS
+- Javascript
+- Typescript
+- React
+- Node.js
+- C#
+- .NET
+- Docker
+- AzureDevOps
+- Next.js
+- SQL Server
+- Svelte
+- Flutter
+- Vue.js
+- PostgreSQL
+- NoSQL
+- Redux
+- Tailwindcss
+- Three.js
+- Webgl
+- Scss
+- Git
+- Cypress
+- Puppeteer
+- Jest
+- Storybook
+- Gatsby.js
+- React-native
+- Electron
+- Webpack
+- vite
+- Socket.io
+- Graphql
+- Shopify Storefront

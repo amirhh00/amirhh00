@@ -12,7 +12,6 @@
 <div class="a4-resume">
 	<div class="content">
 		<div class="grid">
-			<!-- Left Column -->
 			<div class="main-column">
 				<header>
 					<h1>{personalInfo.metadata.name}</h1>
@@ -49,7 +48,6 @@
 				</section>
 			</div>
 
-			<!-- Right Column -->
 			<div class="side-column">
 				<section>
 					<h2>CONTACT</h2>
