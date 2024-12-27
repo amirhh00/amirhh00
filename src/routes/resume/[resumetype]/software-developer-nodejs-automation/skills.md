@@ -2,7 +2,9 @@
 - Javascript
 - Typescript
 - React
+- Node.js
 - Next.js
+- Hono
 - Svelte
 - Flutter
 - Vue.js
@@ -12,16 +14,16 @@
 - Webgl
 - Scss
 - Git
+- Github Actions
+- Ci/Cd
 - Cypress
 - Puppeteer
 - Jest
 - Storybook
-- Gatsby.js
 - React-native
 - Electron
 - Webpack
 - vite
-- Node.js
 - Socket.io
 - Graphql
 - Shopify Storefront
@@ -29,9 +31,8 @@
 - SQL
 - NoSQL
 - Docker
-- AzureDevOps
-- Azure functions
 - Cloudflare Workers
+- AzureDevOps
 - WebGPU
 - WebAssembly
 - WebRTC

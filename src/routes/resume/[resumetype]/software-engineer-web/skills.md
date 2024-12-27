@@ -4,6 +4,8 @@
 - React
 - Next.js
 - Svelte
+- AzureDevOps
+- Cloudflare Workers
 - Flutter
 - Vue.js
 - Redux
@@ -12,16 +14,20 @@
 - Webgl
 - Scss
 - Git
+- Github Actions
 - Cypress
 - Puppeteer
 - Jest
 - Storybook
-- Gatsby.js
+- vitest
+- TDD
+- e2e testing
 - React-native
 - Electron
 - Micro-frontend
 - Webpack
 - vite
+- Hono
 - Node.js
 - Socket.io
 - Graphql
@@ -30,7 +36,6 @@
 - SQL
 - NoSQL
 - Docker
-- AzureDevOps
 - WebGPU
 - WebAssembly
 - WebRTC

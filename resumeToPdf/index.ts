@@ -1,7 +1,8 @@
 import puppeteer from 'npm:puppeteer';
 
 /**
- * @example deno run -A resumeToPdf/index.ts fullstack-csharp-developer
+ * @example 
+ deno run -A resumeToPdf/index.ts fullstack-csharp-developer
  */
 
 const browser = await puppeteer.launch();
