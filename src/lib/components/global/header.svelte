@@ -5,6 +5,12 @@
 
 	let isDesktop = $state(window.innerWidth > 640);
 	let open = $state(window.innerWidth > 640);
+
+	const handleNavLinkClick = () => {
+		if (!isDesktop) {
+			open = false;
+		}
+	};
 </script>
 
 <!-- listen to resize width -->
@@ -25,20 +31,22 @@
 	class="fixed top-0 z-[99999999] flex w-screen items-center border-b-2 bg-[hsl(var(--background))] sm:h-[var(--header-height)]"
 >
 	<div class="container flex items-start justify-between py-2">
-		<p class="logo pointer-events-none font-mono text-xl leading-10">AE</p>
+		<a href="/">
+			<p class="logo pointer-events-none font-mono text-xl leading-10">AE</p>
+		</a>
 		{#if open}
 			<ul class="-ml-2 mt-8 gap-2 sm:mt-0 sm:flex">
 				<li transition:slide|global class="p-2">
-					<a href="#about">About</a>
+					<a onclick={handleNavLinkClick} href="#about">About</a>
 				</li>
 				<li transition:slide|global class="p-2">
-					<a href="#projects">Projects</a>
+					<a onclick={handleNavLinkClick} href="#projects">Projects</a>
 				</li>
 				<li transition:slide|global class="p-2">
-					<a href="#contact">Contact</a>
+					<a onclick={handleNavLinkClick} href="#contact">Contact</a>
 				</li>
 				<li data-sveltekit-reload transition:slide|global class="p-2">
-					<a href="/resume/">Resume</a>
+					<a onclick={handleNavLinkClick} href="/resume/">Resume</a>
 				</li>
 				{#if !isDesktop}
 					<li transition:slide|global={{ duration: 10 }} class="block p-2 sm:hidden">

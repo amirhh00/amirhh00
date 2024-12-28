@@ -14,8 +14,6 @@
 		<figure class={`relative h-full w-full`}>
 			<img
 				loading="lazy"
-				width={media.aspect?.x}
-				height={media.aspect?.y}
 				src={media.poster}
 				alt={media.alt as string}
 				class="h-full w-full object-cover"

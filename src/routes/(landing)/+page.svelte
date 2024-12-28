@@ -12,7 +12,7 @@
 
 <meta name="description" content="Amirhossein Esmaeili's personal website" />
 
-<div id="about" class="text-justify">
+<div id="about" class="scroll-mt-[var(--header-height)] text-justify">
 	{#snippet laptopContent()}
 		<div class="prose pointer-events-none">
 			<data.about />

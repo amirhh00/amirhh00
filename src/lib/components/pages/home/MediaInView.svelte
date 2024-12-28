@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { inview, type Options } from 'svelte-inview';
 	import type { MediaFile } from '$lib/../@types/projects.type';
-	import { fly, fade } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import Video from '$lib/components/global/Video.svelte';
+	import { noMotion } from '$lib/utils/store/motion.state';
 
 	interface Props {
 		media: MediaFile;
@@ -19,32 +20,40 @@
 </script>
 
 <div
-	class="mediaWrapper w-full"
-	style="aspect-ratio: {media.aspect?.value};"
+	class="mediaWrapper rounded-xl"
 	use:inview={options}
 	oninview_change={({ detail }) => {
 		isInView = detail.inView;
-		// scrollDirection = detail.scrollDirection.vertical!;
 	}}
 >
 	{#if isInView}
-		<div in:fly={{ y: 200, duration: 2000 }} out:fade class="media">
+		<div in:fly={{ y: 200, duration: $noMotion ? 0 : 2000 }} class="media">
 			{#if media.type === 'unknown'}
 				<div></div>
 			{:else if media.type === 'image'}
-				<img
-					loading="lazy"
-					width={media.metadata.width}
-					height={media.metadata.height}
-					src={media.url}
-					alt={media.alt as string}
-					class={`mx-auto w-full rounded-xl sm:max-w-sm ${isInView ? 'animate' : ''}`}
-				/>
+				<div
+					style="aspect-ratio: {media.aspect?.value}"
+					class="animate relative mx-auto w-full max-w-full overflow-hidden rounded-xl sm:max-w-sm"
+				>
+					<img
+						loading="lazy"
+						class="absolute left-0 top-0 h-full w-full object-contain"
+						src={media.url}
+						alt={media.alt as string}
+					/>
+				</div>
 			{:else if media.type === 'video'}
 				<Video {media} {isInView} />
 			{/if}
 		</div>
 	{:else}
-		<div class="h-full w-full"></div>
+		{@const width = media.type === 'image' ? `auto` : '100%'}
+		{@const height = media.type === 'image' ? `auto` : 'auto'}
+		{@const aspect = media.aspect!.value}
+		{@const className =
+			media.type === 'image'
+				? 'mx-auto w-full rounded-xl sm:max-w-sm max-w-full animate'
+				: 'mx-auto w-full overflow-hidden rounded-xl sm:max-w-sm animate'}
+		<div class={className} style="width:{width}; height: {height}; aspect-ratio: {aspect}"></div>
 	{/if}
 </div>
