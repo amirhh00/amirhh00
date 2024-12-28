@@ -60,9 +60,7 @@
 
 	$effect(() => {
 		if ($gltf) {
-			console.log('loaded');
 			setTimeout(() => {
-				// ref?.scale.setScalar(1);
 				scaleToOne = true;
 				setTimeout(() => {
 					open = true;
