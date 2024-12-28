@@ -19,13 +19,13 @@
 </script>
 
 <div
+	class="mediaWrapper w-full"
+	style="aspect-ratio: {media.aspect?.value};"
 	use:inview={options}
-	style="width: {media.aspect?.x}px;height:{media.aspect?.y}px;"
 	oninview_change={({ detail }) => {
 		isInView = detail.inView;
 		// scrollDirection = detail.scrollDirection.vertical!;
 	}}
-	class="mediaWrapper"
 >
 	{#if isInView}
 		<div in:fly={{ y: 200, duration: 2000 }} out:fade class="media">
@@ -34,8 +34,8 @@
 			{:else if media.type === 'image'}
 				<img
 					loading="lazy"
-					width={media.aspect?.x}
-					height={media.aspect?.y}
+					width={media.metadata.width}
+					height={media.metadata.height}
 					src={media.url}
 					alt={media.alt as string}
 					class={`mx-auto w-full rounded-xl sm:max-w-sm ${isInView ? 'animate' : ''}`}
