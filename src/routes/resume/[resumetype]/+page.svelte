@@ -6,7 +6,7 @@
 	const { personalInfo, experiences, educations, contact, skills, licenseAndCertifications } = data;
 </script>
 
-<title>{personalInfo.metadata.name} - Resume</title>
+<title>{personalInfo.metadata.name} - {personalInfo.metadata.title} - Resume</title>
 <meta name="description" content="Resume of {personalInfo.metadata.name}" />
 
 <div class="a4-resume">

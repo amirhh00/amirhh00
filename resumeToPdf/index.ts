@@ -19,3 +19,5 @@ await page.pdf({
 });
 
 await browser.close();
+// stdout the absolute path of the generated pdf
+console.log(Deno.cwd() + `/static/${resumeType ? resumeType.replace('/', '') : 'resume'}.pdf`);

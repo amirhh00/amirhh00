@@ -1,6 +1,6 @@
 ---
 title: Frontend Web Developer
-company: Afrang Art, Tehran
+company: Afrang, Tehran
 period: October 2019 - July 2021
 ---
 
