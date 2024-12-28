@@ -15,19 +15,31 @@
 
 	interactivity();
 	let lastPointerPositionDown = { x: 0, y: 0 };
-	let progress = new Tween(-1.6, {
+	let tweenProgress = new Tween(-1.6, {
+		duration: 400,
+		easing: cubicOut
+	});
+
+	let scaleProgress = new Tween(0, {
 		duration: 400,
 		easing: cubicOut
 	});
 
 	let monitor = $state<THREE.Group>();
 	let open = $state(false);
+	let scaleToOne = $state(false);
 
 	$effect(() => {
 		if (open) {
-			progress.set(0.2);
+			tweenProgress.set(0.2);
 		} else {
-			progress.set(-1.6);
+			tweenProgress.set(-1.6);
+		}
+	});
+
+	$effect(() => {
+		if (scaleToOne) {
+			scaleProgress.set(1);
 		}
 	});
 
@@ -45,6 +57,19 @@
 	} = $props();
 
 	const suspend = useSuspense();
+
+	$effect(() => {
+		if ($gltf) {
+			console.log('loaded');
+			setTimeout(() => {
+				// ref?.scale.setScalar(1);
+				scaleToOne = true;
+				setTimeout(() => {
+					open = true;
+				}, 500);
+			}, 500);
+		}
+	});
 
 	type GLTFResult = {
 		nodes: {
@@ -118,9 +143,32 @@
 	}}
 />
 
-<T.Group bind:ref dispose={false as never} {...props as any}>
+<T.Group bind:ref scale={scaleProgress.current} dispose={false as never} {...props as any}>
 	{#await gltf}
-		{@render fallback?.()}
+		<HTML center>
+			<div in:fade={{ delay: 1000 }} class="flex w-36 flex-col items-center gap-4">
+				<p>loading 3D model...</p>
+				<svg
+					fill="currentColor"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
+					>
+						<animateTransform
+							attributeName="transform"
+							type="rotate"
+							dur="0.75s"
+							values="0 12 12;360 12 12"
+							repeatCount="indefinite"
+						/>
+					</path>
+				</svg>
+			</div>
+		</HTML>
 	{:then gltf}
 		<T.Group name="Cube002_106" position={[0, 0.47, 0]} rotation={[0, 0, -0.02]}>
 			<T.Mesh
@@ -291,14 +339,9 @@
 		</T.Group>
 		<T.Group
 			bind:ref={monitor}
-			oncreate={() => {
-				setTimeout(() => {
-					open = true;
-				}, 500);
-			}}
 			name="monitor"
 			position={[0.07, 0.45, 0]}
-			rotation={[0, 0, progress.current]}
+			rotation={[0, 0, tweenProgress.current]}
 		>
 			<T.Mesh
 				name="Object_27_1"

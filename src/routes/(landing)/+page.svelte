@@ -26,13 +26,24 @@
 		{@render laptopContent()}
 	</BackGround3DDesktop>
 
-	<div class="container relative" id="projects">
+	<div class="container relative">
 		<div class="prose">
-			<h2>Projects</h2>
+			<h2 id="projects">Projects</h2>
+			<ul class="mb-8">
+				{#if data}
+					{#each data.projects as project}
+						<li title={`click to view ${project.metadata.title}`}>
+							<a href={`#${camelCase(project.metadata.title as string)}`}>
+								{project.metadata.title}
+							</a>
+						</li>
+					{/each}
+				{/if}
+			</ul>
 		</div>
 		{#if data}
 			{#each data.projects as project}
-				<div id={camelCase(project.metadata.title as string)} class="project mt-4">
+				<div class="project mt-4">
 					<ProjectDescriptions project={project as any} />
 					<div class="medias not-prose relative z-10 my-4 flex flex-col gap-4">
 						{#each project.mediaFiles as media}

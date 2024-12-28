@@ -1,32 +1,10 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import ThemeToggle from './themeToggle.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { slide } from 'svelte/transition';
 
 	let isDesktop = $state(window.innerWidth > 640);
 	let open = $state(window.innerWidth > 640);
-
-	function handleLinkClick(e: MouseEvent) {
-		// Add smooth scrolling to all links
-		e.preventDefault();
-		const link = e.target as HTMLAnchorElement;
-		window.history.pushState({}, '', link.href);
-		const target = document?.querySelector(link.hash);
-		target?.scrollIntoView({ behavior: 'smooth' });
-	}
-
-	onMount(() => {
-		window.addEventListener('popstate', (e) => {
-			e.preventDefault();
-			if (location.hash) {
-				const target = document.querySelector(location.hash);
-				target?.scrollIntoView({ behavior: 'smooth' });
-			} else {
-				window.scrollTo({ top: 0, behavior: 'smooth' });
-			}
-		});
-	});
 </script>
 
 <!-- listen to resize width -->
@@ -51,13 +29,13 @@
 		{#if open}
 			<ul class="-ml-2 mt-8 gap-2 sm:mt-0 sm:flex">
 				<li transition:slide|global class="p-2">
-					<a onclick={handleLinkClick} href="#about">About</a>
+					<a href="#about">About</a>
 				</li>
 				<li transition:slide|global class="p-2">
-					<a onclick={handleLinkClick} href="#projects">Projects</a>
+					<a href="#projects">Projects</a>
 				</li>
 				<li transition:slide|global class="p-2">
-					<a onclick={handleLinkClick} href="#contact">Contact</a>
+					<a href="#contact">Contact</a>
 				</li>
 				<li data-sveltekit-reload transition:slide|global class="p-2">
 					<a href="/resume/">Resume</a>

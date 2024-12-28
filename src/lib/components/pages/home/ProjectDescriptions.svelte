@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Project } from '$lib/../@types/projects.type';
 	import { onMount, type Component } from 'svelte';
+	import { camelCase } from '$lib/utils/etc/case';
 
 	// replace mardown with a component instead of a string in CurrPeoject
 	type CurrProject = Omit<Project, 'markdown'> & { markdown: Component };
@@ -12,7 +13,7 @@
 </script>
 
 <div class="prose contents">
-	<h3>{project.metadata.title}</h3>
+	<h3 id={camelCase(project.metadata.title as string)}>{project.metadata.title}</h3>
 </div>
 <div class="descriptions prose">
 	<project.markdown />

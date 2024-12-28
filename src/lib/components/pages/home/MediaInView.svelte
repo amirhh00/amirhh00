@@ -20,6 +20,7 @@
 
 <div
 	use:inview={options}
+	style="width: {media.aspect?.x}px;height:{media.aspect?.y}px;"
 	oninview_change={({ detail }) => {
 		isInView = detail.inView;
 		// scrollDirection = detail.scrollDirection.vertical!;
@@ -33,8 +34,8 @@
 			{:else if media.type === 'image'}
 				<img
 					loading="lazy"
-					width={media.metadata.width}
-					height={media.metadata.height}
+					width={media.aspect?.x}
+					height={media.aspect?.y}
 					src={media.url}
 					alt={media.alt as string}
 					class={`mx-auto w-full rounded-xl sm:max-w-sm ${isInView ? 'animate' : ''}`}
@@ -44,6 +45,6 @@
 			{/if}
 		</div>
 	{:else}
-		<div class="aspect-[1/2] w-full"></div>
+		<div class="h-full w-full"></div>
 	{/if}
 </div>
