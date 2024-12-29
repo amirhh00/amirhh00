@@ -3,6 +3,7 @@
 	import Sun from 'lucide-svelte/icons/sun';
 	import Moon from 'lucide-svelte/icons/moon';
 	import { dev } from '$app/environment';
+	import { onMount } from 'svelte';
 
 	let { children } = $props();
 
@@ -18,6 +19,23 @@
 		}
 		downloading = false;
 	}
+
+	onMount(() => {
+		const currentMode = { current: $mode };
+		window.onbeforeprint = () => {
+			currentMode.current = $mode;
+			setMode('light');
+		};
+		window.onafterprint = () => {
+			setMode(currentMode.current!);
+		};
+		return () => {
+			// remove all event listeners for beforeprint and afterprint
+			window.onbeforeprint = null;
+			window.onafterprint = null;
+		};
+	});
+
 	async function downloadResume() {
 		downloading = true;
 		if (dev) {
@@ -89,16 +107,7 @@
 	title="Print Resume"
 	class="print-button"
 	aria-label="Print Resume"
-	onclick={() => {
-		let currentMode = $mode;
-		if ($mode === 'dark') {
-			setMode('light');
-			window.print();
-			setMode(currentMode!);
-		} else {
-			window.print();
-		}
-	}}
+	onclick={() => window.print()}
 >
 	<svg
 		fill="currentColor"

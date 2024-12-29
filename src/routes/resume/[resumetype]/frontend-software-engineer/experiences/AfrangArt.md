@@ -4,4 +4,5 @@ company: Afrang, Tehran
 period: October 2019 - July 2021
 ---
 
-- Worked closely with designers and engineers to achieve project objectives, improving test coverage through **unit tests** (Jest) and **E2E tests** (Cypress).
+- Streamlined cross-functional **collaboration** and tackled complex challenges, enhancing user experiences with robust testing **(Jest, Cypress)**.
+- Partnered with designers and developers to accelerate project timelines, aligning objectives and improving **team efficiency**.

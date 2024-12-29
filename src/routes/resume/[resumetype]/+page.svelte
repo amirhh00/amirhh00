@@ -61,9 +61,9 @@
 
 					<div class="skills-group">
 						{#each skills as skill}
-							<div class="skill">
-								{skill}
-							</div>
+							<p class="skill">
+								{skill}<span style="font-size: 1px;visibility: collapse;">,</span>
+							</p>
 						{/each}
 					</div>
 				</section>
@@ -93,6 +93,7 @@
 			font-family: Arial, sans-serif;
 			font-size: 10px;
 			line-height: 1.4;
+			text-align: justify;
 		}
 
 		.a4-resume {
@@ -153,7 +154,7 @@
 		.skills-group {
 			display: flex;
 			flex-wrap: wrap;
-			gap: 2px;
+			column-gap: 6px;
 			font-size: medium;
 		}
 
@@ -170,7 +171,7 @@
 
 		.job,
 		.education {
-			margin-bottom: 4mm;
+			margin-bottom: 2mm;
 		}
 
 		.job-header,

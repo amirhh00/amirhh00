@@ -4,4 +4,4 @@ company: Stylett, Tehran
 period: January 2019 - September 2019
 ---
 
-- Created a **marketplace** and an **admin panel** for Stylett’s vendors to sell their products with the option of being fully **customizable** with twelve 2D and 3D different **configurators** and over **100 products**.
+- Developed a **marketplace** and an **admin panel** enabling vendors to sell products with full **customization** capabilities through twelve 2D and 3D **configurators**, supporting over **100 products**.

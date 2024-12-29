@@ -18,11 +18,14 @@
 - Storybook
 - Gatsby.js
 - React-native
+- Data visualization
+- D3.js
 - Electron
 - Webpack
 - vite
 - Node.js
 - Socket.io
+- Websockets
 - Graphql
 - Shopify Storefront
 - Figma

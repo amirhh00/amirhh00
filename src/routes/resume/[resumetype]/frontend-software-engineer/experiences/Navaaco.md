@@ -4,6 +4,5 @@ company: NavaaCo, Tehran
 period: January 2021 - August 2022
 ---
 
-- Created Imen Gostar **IOT** admin panel and connected **more than 200** of
-  their customer’s fire modules on a map for monitoring purposes.
+- Engineered Imen Gostar **IOT** admin panel, integrating **200+** connected fire modules on a centralized map for real-time monitoring capabilities.
 - **Automated** invoice processing for **3000+** products using **NodeJS** and **ElectronJS**, streamlining financial operations and eliminating manual workload.
