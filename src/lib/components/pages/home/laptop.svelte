@@ -5,16 +5,20 @@
 	import { Tween } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
 	import { T, useTask, useThrelte, type Props } from '@threlte/core';
-	import { useGltf, useSuspense } from '@threlte/extras';
+	import { useCursor, useGltf, useSuspense } from '@threlte/extras';
 	import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 	import { HTML } from '@threlte/extras';
 	import { interactivity } from '@threlte/extras';
 	import { fade } from 'svelte/transition';
 	import { mode } from 'mode-watcher';
 	import type { TEvent } from '$lib/../@types/threlte.type';
+	import { typewriter } from '$lib/utils/transitions';
+	import fragmentShader from '$lib/utils/shaders/crt.fragment.glsl?raw';
+	import vertexShader from '$lib/utils/shaders/crt.vertex.glsl?raw';
+	import rertroBg from '$lib/utils/shaders/fallout_crt.png';
+	import noise from '$lib/utils/shaders/noise.jpg';
 
 	interactivity();
-	let lastPointerPositionDown = { x: 0, y: 0 };
 	let tweenProgress = new Tween(-1.6, {
 		duration: 400,
 		easing: cubicOut
@@ -24,10 +28,30 @@
 		duration: 400,
 		easing: cubicOut
 	});
+	const { hovering } = useCursor();
+	const { hovering: monitorHovering } = useCursor();
 
 	let monitor = $state<THREE.Group>();
+	let retro = $state(false);
 	let open = $state(false);
 	let scaleToOne = $state(false);
+	let speed = $state(10);
+	const textureChannel = new THREE.TextureLoader().load(rertroBg);
+	// make texture repeat
+	textureChannel.wrapS = THREE.RepeatWrapping;
+	textureChannel.wrapT = THREE.RepeatWrapping;
+	textureChannel.repeat.set(4, 4);
+
+	const noiseTexture = new THREE.TextureLoader().load(noise);
+
+	const uniforms = {
+		iTime: { value: 0 },
+		iResolution: { value: new THREE.Vector3() },
+		iChannel0: { value: textureChannel },
+		iChannel1: { value: noiseTexture }
+	};
+
+	const canvas = document.createElement('canvas');
 
 	$effect(() => {
 		if (open) {
@@ -117,8 +141,10 @@
 	const camera = writableCamera.current as THREE.PerspectiveCamera;
 	const pointer = { x: 0, y: 0 };
 
-	useTask(() => {
+	useTask((delta) => {
 		// pointer is current cursor position
+		uniforms.iTime.value += delta * 0.4;
+		uniforms.iResolution.value.set(canvas.width, canvas.height, 1);
 		v.copy({ x: pointer.x, y: pointer.y, z: 0 });
 		v.unproject(camera);
 		camera.position.lerp({ x: -pointer.x * 2, y: -pointer.y, z: camera.position.z }, 0.02);
@@ -172,16 +198,47 @@
 			<T.Mesh
 				name="touchpad"
 				geometry={gltf.nodes.Object_9.geometry}
-				material={gltf.materials['Material.044']}
-			/>
+				onpointerover={() => {
+					$hovering = true;
+				}}
+				onpointerout={() => {
+					$hovering = false;
+				}}
+				onclick={(e: TEvent) => {
+					e.stopPropagation();
+					retro = !retro;
+				}}
+			>
+				{#if $hovering}
+					<!-- use gltf.material.monitor material -->
+					<T.MeshStandardMaterial
+						color={$mode === 'dark' ? 0x000000 : 0xffffff}
+						transparent
+						roughness={0.0}
+						metalness={0.0}
+						opacity={1}
+					/>
+				{:else if retro}
+					<T.MeshStandardMaterial
+						color={$mode === 'dark' ? 0x333333 : 0xffffff}
+						transparent
+						roughness={0.65}
+						metalness={0.7}
+						opacity={1}
+					/>
+				{:else}
+					<T.ShaderMaterial {fragmentShader} {vertexShader} {uniforms} />
+				{/if}
+			</T.Mesh>
 			<T.Mesh
-				name="Object_11"
+				name="space"
 				geometry={gltf.nodes.Object_11.geometry}
 				material={gltf.materials['Material.012']}
 				position={[1.8, -0.22, 0.09]}
 				rotation={[0, 0, -0.1]}
 				scale={[0.12, 0.03, 0.88]}
 			/>
+
 			<T.Mesh
 				name="Object_13"
 				geometry={gltf.nodes.Object_13.geometry}
@@ -343,41 +400,48 @@
 		>
 			<T.Mesh
 				name="Object_27_1"
-				onpointerup={(e: TEvent) => {
-					if (
-						lastPointerPositionDown.x === Number(e.pointer.x.toPrecision(1)) &&
-						lastPointerPositionDown.y === Number(e.pointer.y.toPrecision(1))
-					) {
-						open = !open;
-					} else {
-						console.log('drag', lastPointerPositionDown, e.pointer);
-					}
-				}}
-				onpointerdown={(e: TEvent) => {
-					lastPointerPositionDown = {
-						x: Number(e.pointer.x.toPrecision(1)),
-						y: Number(e.pointer.y.toPrecision(1))
-					};
-				}}
 				geometry={gltf.nodes.Object_27_1.geometry}
 				material={gltf.materials['Material.007']}
+				onpointerover={() => {
+					$monitorHovering = true;
+				}}
+				onpointerout={() => {
+					$monitorHovering = false;
+				}}
+				onclick={(e: TEvent) => {
+					e.stopPropagation();
+					open = !open;
+				}}
 			/>
-			<T.Mesh
-				name="Object_27_2"
-				geometry={gltf.nodes.Object_27_2.geometry}
-				material={new THREE.MeshStandardMaterial({
-					color: $mode === 'dark' ? 0x000000 : 0xffffff,
-					transparent: true,
-					roughness: 0.65,
-					metalness: 0.7,
-					opacity: 1
-				})}
-			/>
+			<T.Mesh name="Object_27_2" geometry={gltf.nodes.Object_27_2.geometry}>
+				{#if retro}
+					<T.ShaderMaterial {fragmentShader} {vertexShader} {uniforms} />
+				{:else}
+					<T.MeshStandardMaterial
+						color={$mode === 'dark' ? 0x000000 : 0xffffff}
+						transparent
+						roughness={0.65}
+						metalness={0.7}
+						opacity={1}
+					/>
+				{/if}
+			</T.Mesh>
 			<T.Group rotation={[0, Math.PI / 2, 0]} position={[0.15, 1.6, 0]}>
-				<HTML rotation={[0.1, 0, 0]} scale={0.3} transform>
+				<HTML pointerEvents="painted" rotation={[0.1, 0, 0]} scale={0.3} transform>
 					{#if open}
-						<div class="text-left" in:fade={{ delay: 200 }}>
-							{@render children?.()}
+						<div class="grid text-left">
+							<div class="layer1 collapse [grid-column:1] [grid-row:1]">
+								{@render children?.()}
+							</div>
+							<div
+								class="layer2 text-xs [grid-column:1] [grid-row:1]"
+								onintroend={() => {
+									speed = 50;
+								}}
+								in:typewriter={{ speed }}
+							>
+								{@render children?.()}
+							</div>
 						</div>
 					{/if}
 				</HTML>
