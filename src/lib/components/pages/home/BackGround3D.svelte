@@ -11,10 +11,11 @@
 		children?: Snippet;
 	} = $props();
 	let isDesktop = $state(window.innerWidth > 640);
+	const isWebGlSupported = !!window.WebGLRenderingContext;
 </script>
 
 <svelte:window on:resize={() => (isDesktop = window.innerWidth > 640)} />
-{#if isDesktop && !$noMotion}
+{#if isDesktop && !$noMotion && isWebGlSupported}
 	<div class="flex h-[calc(100vh_-_var(--header-height,0px))] max-h-[100vw] flex-col gap-4">
 		<div
 			in:fade|global={{ duration: 1000, delay: 200 }}

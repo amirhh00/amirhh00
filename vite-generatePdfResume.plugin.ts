@@ -30,9 +30,19 @@ export function myGenPdfPlugin(): import('vite').Plugin {
 						}
 						const absolutePath = await savePdf(resume);
 						if (absolutePath) {
-							const pdf = await fs.readFile(absolutePath?.trim().replace('\n', ''));
-							res.end(pdf);
-							return;
+							const pdfPath = absolutePath?.trim().replace('\n', '');
+							const pdf = await fs.readFile(pdfPath);
+							try {
+								// check if pdf file has only 1 page
+								await checkIdPdfIsOnePage(pdfPath);
+								res.end(pdf);
+								return;
+							} catch (error) {
+								res.statusCode = 400;
+								res.setHeader('Content-Type', 'text/plain');
+								res.end('pdf resume generation failed' + error);
+								return;
+							}
 						}
 						res.end('pdf resume generation failed');
 						return;
@@ -45,6 +55,15 @@ export function myGenPdfPlugin(): import('vite').Plugin {
 			});
 		}
 	};
+}
+
+async function checkIdPdfIsOnePage(pdfPath: string) {
+	const cmd = `strings < ${pdfPath} | sed -n 's|.*/Count -\\{0,1\\}\\([0-9]\\{1,\\}\\).*|\\1|p' | sort -rn | head -n 1`;
+	const result = await runCmd(cmd);
+	if (result.trim() !== '1') {
+		console.warn('pdf resume has more than 1 page');
+		throw new Error('pdf resume has more than 1 page');
+	}
 }
 
 async function savePdf(resume = '') {

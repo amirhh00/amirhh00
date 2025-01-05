@@ -3,6 +3,7 @@
 	import type { MediaFile } from '$lib/../@types/projects.type';
 	import { fly } from 'svelte/transition';
 	import Video from '$lib/components/global/Video.svelte';
+	import Image from '$lib/components/global/Image.svelte';
 	import { noMotion } from '$lib/utils/store/motion.state';
 
 	interface Props {
@@ -16,7 +17,6 @@
 	};
 
 	let isInView = $state(false);
-	// let scrollDirection = $state('down');
 </script>
 
 <div
@@ -27,21 +27,11 @@
 	}}
 >
 	{#if isInView}
-		<div in:fly={{ y: 200, duration: $noMotion ? 0 : 2000 }} class="media">
+		<div in:fly={{ y: 50, duration: $noMotion ? 0 : 2000 }} class="media">
 			{#if media.type === 'unknown'}
 				<div></div>
 			{:else if media.type === 'image'}
-				<div
-					style="aspect-ratio: {media.aspect?.value}"
-					class="animate relative mx-auto w-full max-w-full overflow-hidden rounded-xl sm:max-w-sm"
-				>
-					<img
-						loading="lazy"
-						class="absolute left-0 top-0 h-full w-full object-contain"
-						src={media.url}
-						alt={media.alt as string}
-					/>
-				</div>
+				<Image {media} />
 			{:else if media.type === 'video'}
 				<Video {media} {isInView} />
 			{/if}

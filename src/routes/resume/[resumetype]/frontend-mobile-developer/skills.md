@@ -1,38 +1,44 @@
-- HTML & CSS
+- React Native
+- Flutter
 - Javascript
 - Typescript
+- Expo
 - React
+- Electron
 - Node.js
-- Next.js
-- Hono
+- Strapi
+- vite (plugin)
 - Svelte
-- Flutter
-- Vue.js
-- Redux
 - Tailwindcss
+- Vue.js
+- Next.js
+- HTML & CSS
+- Redux
 - Three.js
 - Webgl
 - Scss
 - Git
-- Github Actions
-- Ci/Cd
 - Cypress
 - Puppeteer
 - Jest
 - Storybook
-- React-native
-- Electron
-- Webpack
-- vite
-- Socket.io
+- python
+- dotnet core
+- ASP.NET
+- C#
 - Graphql
-- Shopify Storefront
+- PWA
+- Shopify
+- Docker
+- Azure functions
+- Webpack
+- Socket.io
+- Websockets
 - Figma
 - SQL
 - NoSQL
-- Docker
+- MongoDB
 - Cloudflare Workers
-- AzureDevOps
 - WebGPU
 - WebAssembly
 - WebRTC

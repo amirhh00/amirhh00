@@ -4,6 +4,7 @@
 	import Moon from 'lucide-svelte/icons/moon';
 	import { dev } from '$app/environment';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
 	let { children } = $props();
 
@@ -40,20 +41,28 @@
 		downloading = true;
 		if (dev) {
 			if ((await fetch('/generate-pdf-resume')).ok) {
-				const pdf = await fetch('/generate-pdf-resume', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/pdf'
+				try {
+					const pdf = await fetch('/generate-pdf-resume', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/pdf'
+						}
+					});
+					if (!pdf.ok) {
+						alert('Failed to download resume');
+						throw new Error('Failed to download resume');
 					}
-				});
-				const blob = await pdf.blob();
-				const url = URL.createObjectURL(blob);
-				const a = document.createElement('a');
-				a.href = url;
-				a.download = `${document.title}.pdf`;
-				document.body.appendChild(a);
-				a.click();
-				window.URL.revokeObjectURL(url);
+					const blob = await pdf.blob();
+					const url = URL.createObjectURL(blob);
+					const a = document.createElement('a');
+					a.href = url;
+					a.download = `${document.title}.pdf`;
+					document.body.appendChild(a);
+					a.click();
+					window.URL.revokeObjectURL(url);
+				} catch (error) {
+					console.error(error);
+				}
 			} else {
 				console.log('download only works in development mode');
 			}
@@ -63,6 +72,20 @@
 			);
 		}
 	}
+	window.addEventListener('popstate', (event) => {
+		// previous route is a redirect to the same route
+		goto('/', {
+			replaceState: true,
+			invalidateAll: true,
+			keepFocus: false,
+			noScroll: true,
+			state: {}
+		}).then(() => {
+			// adding this to properly place canvas in the center
+			// because current page is not using tailwind and sveltekit keeps the style of the previous route
+			window.location.reload();
+		});
+	});
 </script>
 
 <ModeWatcher defaultMode="system" />

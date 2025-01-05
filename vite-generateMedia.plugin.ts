@@ -31,19 +31,8 @@ export function myMediaPlugin(): Plugin {
 			if (mediaType === 'image') {
 				const img = sharp(base);
 				const metadata = await img.metadata();
-				const output = await img
-					.toFormat('webp', {
-						smartSubsample: true
-					})
-					.blur(1.25)
-					.resize({
-						width: 32,
-						height: 32,
-						fit: 'inside',
-						kernel: sharp.kernel.cubic
-					})
-					.toBuffer();
-				const thumb = `data:${mime.getType(path.extname(base!))};base64,${output.toString('base64')}`;
+
+				const thumb = await generateThumbnail(img, base);
 
 				return `
           import url from '${base}?url';
@@ -57,7 +46,7 @@ export function myMediaPlugin(): Plugin {
             },
             isImage: true,
             isVideo: false,
-            thumbnail: \`${thumb}\`,
+            thumbnail: ${thumb ? `'${thumb}'` : 'null'},
             metadata: ${JSON.stringify(metadata)}
           };
         `;
@@ -114,6 +103,26 @@ export function myMediaPlugin(): Plugin {
 			}
 		}
 	};
+}
+
+async function generateThumbnail(img: sharp.Sharp, base: string): Promise<string | null> {
+	// if is svg, return null
+	if (base.endsWith('.svg')) {
+		return null;
+	}
+	const output = await img
+		.toFormat('webp', {
+			smartSubsample: true
+		})
+		.blur(1.25)
+		.resize({
+			width: 32,
+			height: 32,
+			fit: 'outside',
+			kernel: sharp.kernel.cubic
+		})
+		.toBuffer();
+	return `data:${mime.getType(path.extname(base!))};base64,${output.toString('base64')}`;
 }
 
 function hashImagePath(s: string) {

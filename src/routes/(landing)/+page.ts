@@ -9,7 +9,7 @@ export const load: PageLoad = async () => {
 		eager: true
 	});
 	const allMediaFiles = import.meta.glob<{ default: MediaFile }>(
-		'/src/static/projects/**/*.{png,jpg,jpeg,svg,mp4}',
+		'/src/static/projects/**/*.{png,jpg,webp,gif,webm,ico,bmp,jpeg,svg,mp4}',
 		{
 			query: 'myMedia',
 			eager: true

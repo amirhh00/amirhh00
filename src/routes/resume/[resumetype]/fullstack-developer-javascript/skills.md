@@ -3,9 +3,13 @@
 - Typescript
 - React
 - Next.js
+- Node.js
+- vite
 - Svelte
-- AzureDevOps
-- Cloudflare Workers
+- dotnet core
+- C#
+- ASP.NET
+- python
 - Flutter
 - Vue.js
 - Redux
@@ -14,28 +18,26 @@
 - Webgl
 - Scss
 - Git
-- Github Actions
 - Cypress
 - Puppeteer
 - Jest
 - Storybook
-- vitest
-- TDD
-- e2e testing
-- React-native
-- Electron
-- Micro-frontend
-- Webpack
-- vite
-- Hono
-- Node.js
-- Socket.io
+- Gatsby.js
+- React Native
 - Graphql
 - Shopify Storefront
+- Docker
+- AzureDevOps
+- Azure functions
+- Electron
+- Webpack
+- Socket.io
+- Websockets
 - Figma
 - SQL
 - NoSQL
-- Docker
+- MongoDB
+- Cloudflare Workers
 - WebGPU
 - WebAssembly
 - WebRTC

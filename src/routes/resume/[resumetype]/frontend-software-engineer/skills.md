@@ -2,24 +2,18 @@
 - Javascript
 - Typescript
 - React
-- React Native
-- Next.js
-- Graphql
-- Shopify Storefront
-- Docker
-- AzureDevOps
-- Azure functions
-- vite
 - Node.js
+- Next.js
+- Strapi
 - dotnet core
 - C#
 - ASP.NET
-- python
+- vite (plugin)
 - Svelte
+- Tailwindcss
 - Flutter
 - Vue.js
 - Redux
-- Tailwindcss
 - Three.js
 - Webgl
 - Scss
@@ -29,6 +23,12 @@
 - Jest
 - Storybook
 - Gatsby.js
+- python
+- React Native
+- Graphql
+- Shopify Storefront
+- Docker
+- Azure functions
 - Electron
 - Webpack
 - Socket.io
@@ -36,6 +36,7 @@
 - Figma
 - SQL
 - NoSQL
+- MongoDB
 - Cloudflare Workers
 - WebGPU
 - WebAssembly
