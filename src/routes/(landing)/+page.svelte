@@ -14,7 +14,7 @@
 
 <div id="about" class="scroll-mt-[var(--header-height)] text-justify">
 	{#snippet laptopContent()}
-		<div class="prose pointer-events-none">
+		<div class="prose">
 			<data.about />
 		</div>
 		<div class="prose" id="experiences">

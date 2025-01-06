@@ -402,16 +402,6 @@
 				name="Object_27_1"
 				geometry={gltf.nodes.Object_27_1.geometry}
 				material={gltf.materials['Material.007']}
-				onpointerover={() => {
-					$monitorHovering = true;
-				}}
-				onpointerout={() => {
-					$monitorHovering = false;
-				}}
-				onclick={(e: TEvent) => {
-					e.stopPropagation();
-					open = !open;
-				}}
 			/>
 			<T.Mesh name="Object_27_2" geometry={gltf.nodes.Object_27_2.geometry}>
 				{#if retro}
