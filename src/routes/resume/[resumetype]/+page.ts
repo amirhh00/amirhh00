@@ -7,8 +7,7 @@ export const prerender = true;
 export const entries: EntryGenerator = () => {
 	return [
 		// should manually add new resumetype here so the svelte-kit can crawl the page
-		{ resumetype: 'frontend-software-engineer' },
-		{ resumetype: 'fullstack-csharp-developer' }
+		{ resumetype: 'software-engineer' }
 	];
 };
 
@@ -58,7 +57,7 @@ type MyParams = {
 
 export const load: PageLoad = async ({ params }) => {
 	const resumeType = (params as MyParams).resumetype;
-	if (!resumeType) redirect(302, '/resume/frontend-software-engineer');
+	if (!resumeType) redirect(302, '/resume/software-engineer');
 	const personalInfo = Object.entries(
 		import.meta.glob<PersonalInfo>('./**/personalInfo.md', { eager: true })
 	).find(([path]) => isInSamePathAsQueryParam(path, resumeType));

@@ -68,7 +68,7 @@
 			}
 		} else {
 			window.open(
-				'https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/static/frontend-software-engineer.pdf'
+				'https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/static/software-engineer.pdf'
 			);
 		}
 	}

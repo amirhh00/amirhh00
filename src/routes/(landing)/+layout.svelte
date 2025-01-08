@@ -9,7 +9,9 @@
 
 <ModeWatcher defaultMode="system" />
 <Header />
-<main class="mt-[var(--header-height)]">
+<main
+	class="mt-[var(--header-height)] min-h-[calc(100vh_-_var(--header-height)_-_var(--footer-height))]"
+>
 	{@render children()}
 </main>
 <Footer />

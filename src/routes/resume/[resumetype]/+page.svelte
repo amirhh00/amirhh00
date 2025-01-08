@@ -71,11 +71,6 @@
 					<h2>LICENSES & CERTIFICATIONS</h2>
 					<div>
 						{#each licenseAndCertifications as license}
-							<div>
-								<h3 class="inline">{license.metadata.title}</h3>
-								<span>({license.metadata.period})</span>
-							</div>
-							<p>{license.metadata.issuer}</p>
 							<license.html />
 						{/each}
 					</div>

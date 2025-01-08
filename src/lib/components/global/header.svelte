@@ -2,9 +2,15 @@
 	import ThemeToggle from './themeToggle.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { slide } from 'svelte/transition';
+	import { page } from '$app/stores';
+	import { onNavigate } from '$app/navigation';
 
 	let isDesktop = $state(window.innerWidth > 640);
 	let open = $state(window.innerWidth > 640);
+	let isHome = $state($page.url.pathname === '/');
+	onNavigate((e) => {
+		isHome = e.to?.url.pathname === '/';
+	});
 
 	const handleNavLinkClick = () => {
 		if (!isDesktop) {
@@ -36,18 +42,28 @@
 		</a>
 		{#if open}
 			<ul class="-ml-2 mt-8 gap-2 sm:mt-0 sm:flex">
+				{#if isHome}
+					<li transition:slide|global class="p-2">
+						<a onclick={handleNavLinkClick} href="#about">About</a>
+					</li>
+					<li transition:slide|global class="p-2">
+						<a onclick={handleNavLinkClick} href="#projects">Projects</a>
+					</li>
+					<li transition:slide|global class="p-2">
+						<a onclick={handleNavLinkClick} href="#contact">Contact</a>
+					</li>
+				{:else}
+					<li transition:slide|global class="p-2">
+						<a onclick={handleNavLinkClick} href="/">Home</a>
+					</li>
+				{/if}
 				<li transition:slide|global class="p-2">
-					<a onclick={handleNavLinkClick} href="#about">About</a>
-				</li>
-				<li transition:slide|global class="p-2">
-					<a onclick={handleNavLinkClick} href="#projects">Projects</a>
-				</li>
-				<li transition:slide|global class="p-2">
-					<a onclick={handleNavLinkClick} href="#contact">Contact</a>
+					<a onclick={handleNavLinkClick} href="/certifications">Certifications</a>
 				</li>
 				<li data-sveltekit-reload transition:slide|global class="p-2">
 					<a onclick={handleNavLinkClick} href="/resume/">Resume</a>
 				</li>
+
 				{#if !isDesktop}
 					<li transition:slide|global={{ duration: 10 }} class="block p-2 sm:hidden">
 						<ThemeToggle />
