@@ -7,7 +7,7 @@ date: 2022-10-01
 
 ### Schilte
 
-Schilte is a web application designed for creating customizable 3D cabinet
+[Schilte](https://configurator.schilte.nl) is a web application designed for creating customizable 3D cabinet
 models. Users can modify the cabinet's dimensions, colors, and materials, as
 well as add features like shelves, doors, and drawers. The application allows
 users to view and rotate the cabinet in 3D, save their designs, and share them
