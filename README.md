@@ -124,7 +124,7 @@ Players can see each other in real-time and communicate using voice chat.
 
 ### Schilte
 
-Schilte is a web application designed for creating customizable 3D cabinet
+[Schilte](https:&#x2F;&#x2F;configurator.schilte.nl) is a web application designed for creating customizable 3D cabinet
 models. Users can modify the cabinet&#39;s dimensions, colors, and materials, as
 well as add features like shelves, doors, and drawers. The application allows
 users to view and rotate the cabinet in 3D, save their designs, and share them
@@ -141,6 +141,12 @@ Node.js, and TypeScript.
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/schilte/2024-12-18 23-00-19.mp4" type="video/mp4">
 </video>
+
+
+
+
+<img src="src/static/projects/schilte/screenshot-schilte.jpg" alt="schilte1" width="320">
+
 
 
 
