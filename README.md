@@ -124,16 +124,12 @@ Players can see each other in real-time and communicate using voice chat.
 
 ### Schilte
 
-[Schilte](https:&#x2F;&#x2F;configurator.schilte.nl) is a web application designed for creating customizable 3D cabinet
-models. Users can modify the cabinet&#39;s dimensions, colors, and materials, as
-well as add features like shelves, doors, and drawers. The application allows
-users to view and rotate the cabinet in 3D, save their designs, and share them
-with others. It is built using React, NextJs, Three.js, Zustand, TailwindCSS,
-Node.js, and TypeScript.
+[Schilte](https:&#x2F;&#x2F;configurator.schilte.nl) is a web application designed for creating customizable 3D cabinet models. Users can modify the cabinet&#39;s dimensions, colors, and materials, as well as add features like shelves, doors, and drawers. The application allows users to view and rotate the cabinet in 3D, save their designs, and share them with others.
+Additionally, APIs were developed using Strapi, allowing the owner to manage prices and products through an intuitive dashboard interface.
 
-**worked on**: frontend
+**worked on**: frontend,backend
 
-**tools used**: React,NextJs,Three.js,Zustand,TailwindCSS,Node.js,TypeScript
+**tools used**: React,NextJs,Three.js,Strapi,Zustand,TailwindCSS,Node.js,TypeScript
 
 
 
@@ -147,6 +143,12 @@ Node.js, and TypeScript.
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/schilte/2024-12-18 23-00-19.mp4" type="video/mp4">
 </video>
+
+
+
+
+<img src="src/static/projects/schilte/strapi.jpg" alt="schilte2" width="320">
+
 
 
 
