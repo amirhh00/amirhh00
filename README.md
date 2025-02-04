@@ -40,39 +40,7 @@ progress, and utilize AI assistance throughout their learning journey.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-37-44.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-35-15.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/admin_panel.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-38-13.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-20-58.mp4" type="video/mp4">
 </video>
 
 
@@ -88,7 +56,39 @@ progress, and utilize AI assistance throughout their learning journey.
 
 
 <video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-20-58.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/admin_panel.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-35-15.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-18-52.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/wgsl101/2024-12-18 22-37-44.mp4" type="video/mp4">
 </video>
 
 
@@ -137,6 +137,12 @@ Node.js, and TypeScript.
 
 
 
+<img src="src/static/projects/schilte/screenshot-schilte.jpg" alt="schilte0" width="320">
+
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/schilte/2024-12-18 23-00-19.mp4" type="video/mp4">
@@ -145,7 +151,61 @@ Node.js, and TypeScript.
 
 
 
-<img src="src/static/projects/schilte/screenshot-schilte.jpg" alt="schilte1" width="320">
+### Quick Part
+
+The Quick Parts Price Search application is a robust platform designed to empower sellers by providing real-time pricing information for a wide range of auto parts. With an intuitive interface, users can efficiently search for specific components, compare prices, and place orders seamlessly. This streamlined process not only enhances the shopping experience but also facilitates informed decision-making, ensuring that sellers can manage their inventory and procurement with ease.
+
+**worked on**: frontend,panel
+
+**tools used**: Flutter,React,NextJs,Redux,Material-UI,Node.js,TypeScript,WordPress API
+
+
+
+<img src="src/static/projects/quick-part/2.webp" alt="quick-part0" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/3.webp" alt="quick-part1" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/1.svg" alt="quick-part2" width="320">
+
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/quick-part/5.mp4" type="video/mp4">
+</video>
+
+
+
+
+<img src="src/static/projects/quick-part/4.webp" alt="quick-part4" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/7.webp" alt="quick-part5" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/8.webp" alt="quick-part6" width="320">
+
+
+
+
+
+<img src="src/static/projects/quick-part/6.webp" alt="quick-part7" width="320">
 
 
 
@@ -169,6 +229,12 @@ data.
 
 
 
+<img src="src/static/projects/firedetect/z_app6.webp" alt="firedetect1" width="320">
+
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-module.mp4" type="video/mp4">
@@ -187,15 +253,27 @@ data.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building4.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-page.mp4" type="video/mp4">
 </video>
+
+
+
+
+<img src="src/static/projects/firedetect/z_app5.webp" alt="firedetect5" width="320">
+
+
+
+
+
+<img src="src/static/projects/firedetect/z_app1.svg" alt="firedetect6" width="320">
+
 
 
 
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-building.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/user-management.mp4" type="video/mp4">
 </video>
 
 
@@ -204,30 +282,6 @@ data.
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building3.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/home-page.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/profile-fire-detect.mp4" type="video/mp4">
-</video>
-
-
-
-
-
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-page.mp4" type="video/mp4">
 </video>
 
 
@@ -247,6 +301,34 @@ data.
 
 
 
+<img src="src/static/projects/firedetect/z_app4.webp" alt="firedetect11" width="320">
+
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/home-page.mp4" type="video/mp4">
+</video>
+
+
+
+
+<img src="src/static/projects/firedetect/z_app2.webp" alt="firedetect13" width="320">
+
+
+
+
+
+
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/profile-fire-detect.mp4" type="video/mp4">
+</video>
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-simcard.mp4" type="video/mp4">
@@ -257,29 +339,13 @@ data.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/user-management.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/edit-building4.mp4" type="video/mp4">
 </video>
 
 
 
 
-### Quick Part
-
-The Quick Parts Price Search application is a robust platform designed to empower sellers by providing real-time pricing information for a wide range of auto parts. With an intuitive interface, users can efficiently search for specific components, compare prices, and place orders seamlessly. This streamlined process not only enhances the shopping experience but also facilitates informed decision-making, ensuring that sellers can manage their inventory and procurement with ease.
-
-**worked on**: frontend,panel
-
-**tools used**: Flutter,React,NextJs,Redux,Material-UI,Node.js,TypeScript,WordPress API
-
-
-
-<img src="src/static/projects/quick-part/6.webp" alt="quick-part0" width="320">
-
-
-
-
-
-<img src="src/static/projects/quick-part/1.svg" alt="quick-part1" width="320">
+<img src="src/static/projects/firedetect/z_app3.webp" alt="firedetect17" width="320">
 
 
 
@@ -287,38 +353,8 @@ The Quick Parts Price Search application is a robust platform designed to empowe
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/quick-part/5.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/firedetect/add-building.mp4" type="video/mp4">
 </video>
-
-
-
-
-<img src="src/static/projects/quick-part/7.webp" alt="quick-part3" width="320">
-
-
-
-
-
-<img src="src/static/projects/quick-part/4.webp" alt="quick-part4" width="320">
-
-
-
-
-
-<img src="src/static/projects/quick-part/2.webp" alt="quick-part5" width="320">
-
-
-
-
-
-<img src="src/static/projects/quick-part/8.webp" alt="quick-part6" width="320">
-
-
-
-
-
-<img src="src/static/projects/quick-part/3.webp" alt="quick-part7" width="320">
-
 
 
 
@@ -362,16 +398,14 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/homepage-stylett.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize2-stylett.mp4" type="video/mp4">
 </video>
 
 
 
 
+<img src="src/static/projects/stylett/customize.png" alt="stylett1" width="320">
 
-<video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize4-stylett.mp4" type="video/mp4">
-</video>
 
 
 
@@ -386,7 +420,7 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize2-stylett.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/homepage-stylett.mp4" type="video/mp4">
 </video>
 
 
@@ -400,14 +434,16 @@ with the possibility of personalizing and customizing the product for customers.
 
 
 <video width="320" controls loop muted autoplay>
-<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize3-stylett.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize4-stylett.mp4" type="video/mp4">
 </video>
 
 
 
 
-<img src="src/static/projects/stylett/customize.png" alt="stylett6" width="320">
 
+<video width="320" controls loop muted autoplay>
+<source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/stylett/customize3-stylett.mp4" type="video/mp4">
+</video>
 
 
 
@@ -431,13 +467,13 @@ gamification in the app and give them coins that they can cash out them.
 
 
 
-<img src="src/static/projects/pasco/6.webp" alt="pasco1" width="320">
+<img src="src/static/projects/pasco/1.svg" alt="pasco1" width="320">
 
 
 
 
 
-<img src="src/static/projects/pasco/1.svg" alt="pasco2" width="320">
+<img src="src/static/projects/pasco/4.webp" alt="pasco2" width="320">
 
 
 
@@ -451,13 +487,13 @@ gamification in the app and give them coins that they can cash out them.
 
 
 
-<img src="src/static/projects/pasco/4.webp" alt="pasco4" width="320">
+<img src="src/static/projects/pasco/5.webp" alt="pasco4" width="320">
 
 
 
 
 
-<img src="src/static/projects/pasco/5.webp" alt="pasco5" width="320">
+<img src="src/static/projects/pasco/6.webp" alt="pasco5" width="320">
 
 
 
@@ -488,16 +524,16 @@ Iran. This app also uses in a variety of schools for teaching purposes.
 
 
 
+<img src="src/static/projects/realup/4.webp" alt="realup2" width="320">
+
+
+
+
+
 
 <video width="320" controls loop muted autoplay>
 <source src="https://raw.githubusercontent.com/amirhh00/amirhh00/refs/heads/main/src/static/projects/realup/2.mp4" type="video/mp4">
 </video>
-
-
-
-
-<img src="src/static/projects/realup/4.webp" alt="realup3" width="320">
-
 
 
 
