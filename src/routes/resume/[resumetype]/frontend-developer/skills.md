@@ -39,6 +39,7 @@
 - Websockets
 - MongoDB
 - GitLab CI
+- OpenAI
 - Cloudflare Workers
 - WebGPU
 - WebAssembly
