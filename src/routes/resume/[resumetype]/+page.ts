@@ -90,8 +90,8 @@ export const load: PageLoad = async ({ params }) => {
 			})
 		)
 	).sort((a, b) => {
-		const aEndDate = new Date(a.metadata.period.split('-')[1].trim());
-		const bEndDate = new Date(b.metadata.period.split('-')[1].trim());
+		const aEndDate = getDateFromPeriod(a.metadata.period);
+		const bEndDate = getDateFromPeriod(b.metadata.period);
 		return bEndDate.getTime() - aEndDate.getTime();
 	});
 	if (!experiences.length) throw error(404, 'Experiences not found');
@@ -152,4 +152,13 @@ function isInSamePathAsQueryParam(path: string, queryParam: string) {
 	const pathSegments = path.split('/');
 	const queryFolder = pathSegments.find((segment) => segment === queryParam);
 	return queryFolder === queryParam;
+}
+
+function getDateFromPeriod(period: string) {
+	const [, endDate] = period.split('-').map((date) => date.trim());
+	const date = new Date(endDate);
+	if (isNaN(date.getTime())) {
+		return new Date(Date.now());
+	}
+	return date;
 }

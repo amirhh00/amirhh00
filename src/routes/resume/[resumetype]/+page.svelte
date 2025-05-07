@@ -218,11 +218,12 @@
 			height: 297mm;
 			margin: 0;
 			box-shadow: none;
+			padding: 0;
 		}
 		.skill {
 			background-color: transparent;
 			color: black;
-			border: 1px solid #3498db;
+			outline: 1px solid #3498db;
 			border-radius: 4px;
 		}
 	}
